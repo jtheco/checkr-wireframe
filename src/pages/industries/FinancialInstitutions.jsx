@@ -9,9 +9,9 @@ export default function FinancialInstitutions() {
   return (
     <Layout>
       {/* HERO */}
-      <section style={{ background: '#fff', padding: '96px 0' }}>
+      <section className="section-hero" style={{ background: '#fff' }}>
         <div className="content-wrap">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
+          <div className="grid-hero">
             <div>
               <span className="eyebrow">KYx for Financial Institutions</span>
               <h1 style={{ marginBottom: 24 }}>Stop fraud before it disrupts your business.</h1>
@@ -28,7 +28,7 @@ export default function FinancialInstitutions() {
       </section>
 
       {/* PROBLEM/SOLUTION */}
-      <section style={{ background: '#f8f8f7', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#f8f8f7' }}>
         <div className="content-wrap">
           <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
             <h2 style={{ marginBottom: 16 }}>KYC isn't enough if it stops at identity.</h2>
@@ -40,13 +40,13 @@ export default function FinancialInstitutions() {
       </section>
 
       {/* FEATURE GRID (Products) */}
-      <section style={{ background: '#fff', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#fff' }}>
         <div className="content-wrap">
           <h2 style={{ marginBottom: 16 }}>The KYx risk stack for financial institutions.</h2>
           <p style={{ maxWidth: 640, color: '#555', marginBottom: 40 }}>
             Checkr Trust delivers real-time insights from multiple layers of customer risk—criminal, watchlist, and identity data—all through one flexible integration.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
+          <div className="grid-2col-cards">
             {[
               {
                 title: 'National Criminal Database',
@@ -89,17 +89,17 @@ export default function FinancialInstitutions() {
       <DashboardModule />
 
       {/* STATS */}
-      <section style={{ background: '#fff', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#fff' }}>
         <div className="content-wrap">
           <h2 style={{ marginBottom: 40 }}>Why leading financial institutions choose Checkr Trust.</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32, marginBottom: 40 }}>
+          <div className="grid-3col" style={{ marginBottom: 40 }}>
             {[
               { stat: '99%', label: 'US identity verification coverage' },
               { stat: '2,400+', label: 'criminal data sources in real time' },
               { stat: 'Global', label: 'watchlists across sanctions and enforcement agencies' },
             ].map((item) => (
               <div key={item.label} style={{ textAlign: 'center' }}>
-                <div style={{ fontSize: 48, fontWeight: 600, color: '#111', lineHeight: 1, marginBottom: 8 }}>{item.stat}</div>
+                <div className="stat-number" style={{ fontSize: 48, fontWeight: 600, color: '#111', lineHeight: 1, marginBottom: 8 }}>{item.stat}</div>
                 <div style={{ fontSize: 14, color: '#666' }}>{item.label}</div>
               </div>
             ))}

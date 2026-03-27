@@ -7,9 +7,9 @@ export default function DriverChecks() {
   return (
     <Layout>
       {/* HERO */}
-      <section style={{ background: '#fff', padding: '96px 0' }}>
+      <section className="section-hero" style={{ background: '#fff' }}>
         <div className="content-wrap">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
+          <div className="grid-hero">
             <div>
               <span className="eyebrow">Driver Checks</span>
               <h1 style={{ marginBottom: 24 }}>The driver data layer for safer and more profitable operations.</h1>
@@ -26,7 +26,7 @@ export default function DriverChecks() {
       </section>
 
       {/* PROBLEM/SOLUTION */}
-      <section style={{ background: '#f8f8f7', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#f8f8f7' }}>
         <div className="content-wrap">
           <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
             <h2 style={{ marginBottom: 16 }}>Leading mobility platforms know that driver risk is business risk.</h2>
@@ -38,10 +38,10 @@ export default function DriverChecks() {
       </section>
 
       {/* BENEFITS */}
-      <section style={{ background: '#fff', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#fff' }}>
         <div className="content-wrap">
           <h2 style={{ marginBottom: 40 }}>Built to reduce friction, fraud, and financial risk.</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 32 }}>
+          <div className="grid-2col">
             {[
               { h3: 'Reduce theft and damage.', p: 'Verify license status and flag risk before the keys are ever handed over.' },
               { h3: 'Cut insurance costs and claims.', p: 'Lower insurance premiums and reduce costly claims by keeping high-risk drivers off the road.' },
@@ -61,13 +61,13 @@ export default function DriverChecks() {
       </section>
 
       {/* CROSS-LINKS */}
-      <section style={{ background: '#f8f8f7', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#f8f8f7' }}>
         <div className="content-wrap">
           <h2 style={{ marginBottom: 16 }}>Tailored for vehicle rental and sharing models.</h2>
           <p style={{ maxWidth: 640, color: '#555', marginBottom: 40 }}>
             Whether you're managing a rental fleet or a peer-to-peer marketplace, Checkr Trust tailors driver checks to your model, so you can onboard faster, prevent costly incidents, and operate with confidence.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+          <div className="grid-2col-cards">
             <Link to="/industries/vehicle-rental-and-sharing" style={{ border: '1px solid #e5e5e5', borderRadius: 12, padding: 20, background: '#fff', display: 'flex', flexDirection: 'column', textDecoration: 'none', color: 'inherit' }}>
               <h3 style={{ marginBottom: 8 }}>Vehicle Rentals</h3>
               <p style={{ marginBottom: 16, flex: 1, fontSize: 14, color: '#666' }}>
@@ -91,7 +91,7 @@ export default function DriverChecks() {
       </section>
 
       {/* FEATURE GRID */}
-      <section style={{ background: '#fff', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#fff' }}>
         <div className="content-wrap">
           <h2 style={{ marginBottom: 16 }}>Driver insights, built for scale.</h2>
           <p style={{ maxWidth: 640, color: '#555', marginBottom: 16 }}>
@@ -106,7 +106,7 @@ export default function DriverChecks() {
           >
             See API documentation →
           </a>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
+          <div className="grid-2col-cards">
             {[
               {
                 title: 'Motor Vehicle Reports (MVRs)',
@@ -128,13 +128,13 @@ export default function DriverChecks() {
       </section>
 
       {/* CREDIBILITY */}
-      <section style={{ background: '#f8f8f7', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#f8f8f7' }}>
         <div className="content-wrap">
           <h2 style={{ marginBottom: 16 }}>Driver intelligence from the team that invented modern background checks.</h2>
           <p style={{ maxWidth: 640, color: '#555', marginBottom: 40 }}>
             Checkr Trust powers over 10 million user screens every month—including license and driving data at scale. With direct access to real-time license and driving history data, we help mobility platforms verify drivers, protect assets, reduce theft and damage, and scale operations with confidence.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+          <div className="grid-3col-cards">
             {[
               { h3: 'Real-time risk insight.', p: 'Deliver results in seconds so you can move as fast as your customers demand.' },
               { h3: 'Cost-effective at scale.', p: "Save up to 100% on DMV fees for driver's license status checks." },
@@ -150,10 +150,10 @@ export default function DriverChecks() {
       </section>
 
       {/* SUCCESS STORY (Turo) */}
-      <section style={{ background: '#fff', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#fff' }}>
         <div className="content-wrap">
           <div style={{ border: '1px solid #e5e5e5', borderRadius: 20, overflow: 'hidden' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+            <div className="grid-story">
               <div style={{ padding: 40, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                 <div style={{ height: 32, width: 96, borderRadius: 6, background: '#e8e8e8', marginBottom: 24, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 600, color: '#aaa' }}>Turo</div>
                 <h2 style={{ marginBottom: 24 }}>Turo creates a trusted environment for vehicle hosts and guests.</h2>
@@ -170,7 +170,7 @@ export default function DriverChecks() {
       </section>
 
       {/* TESTIMONIAL */}
-      <section style={{ background: '#f8f8f7', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#f8f8f7' }}>
         <div className="content-wrap">
           <div className="quote-block" style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
             <div style={{ width: 52, height: 52, borderRadius: '50%', background: '#e0e0e0', margin: '0 auto 24px' }} />

@@ -9,9 +9,9 @@ export default function OnlineDating() {
   return (
     <Layout>
       {/* HERO */}
-      <section style={{ background: '#fff', padding: '96px 0' }}>
+      <section className="section-hero" style={{ background: '#fff' }}>
         <div className="content-wrap">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
+          <div className="grid-hero">
             <div>
               <span className="eyebrow">KYx for Online Dating</span>
               <h1 style={{ marginBottom: 24 }}>Keep bad actors off your dating platform.</h1>
@@ -28,7 +28,7 @@ export default function OnlineDating() {
       </section>
 
       {/* PROBLEM/SOLUTION */}
-      <section style={{ background: '#f8f8f7', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#f8f8f7' }}>
         <div className="content-wrap">
           <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
             <h2 style={{ marginBottom: 16 }}>You can't scale if users don't feel safe.</h2>
@@ -40,13 +40,13 @@ export default function OnlineDating() {
       </section>
 
       {/* FEATURE GRID (Products) */}
-      <section style={{ background: '#fff', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#fff' }}>
         <div className="content-wrap">
           <h2 style={{ marginBottom: 16 }}>The KYx safety stack for online dating platforms.</h2>
           <p style={{ maxWidth: 640, color: '#555', marginBottom: 40 }}>
             Checkr Trust delivers real-time insights from multiple layers of customer risk—criminal, sex offender, and identity data—all through one flexible integration.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
+          <div className="grid-2col-cards">
             {[
               {
                 title: 'National Criminal Database',
@@ -83,7 +83,7 @@ export default function OnlineDating() {
       </section>
 
       {/* TESTIMONIAL */}
-      <section style={{ background: '#f8f8f7', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#f8f8f7' }}>
         <div className="content-wrap">
           <div className="quote-block" style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
             <div style={{ width: 52, height: 52, borderRadius: '50%', background: '#e0e0e0', margin: '0 auto 24px' }} />
@@ -103,17 +103,17 @@ export default function OnlineDating() {
       <DashboardModule />
 
       {/* STATS */}
-      <section style={{ background: '#fff', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#fff' }}>
         <div className="content-wrap">
           <h2 style={{ marginBottom: 40 }}>Why leading online dating platforms choose Checkr Trust.</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32, marginBottom: 40 }}>
+          <div className="grid-3col" style={{ marginBottom: 40 }}>
             {[
               { stat: '99%', label: 'US identity verification coverage' },
               { stat: '2,400+', label: 'criminal data sources in real time' },
               { stat: '40%', label: 'fewer manual reviews with passive PII checks' },
             ].map((item) => (
               <div key={item.label} style={{ textAlign: 'center' }}>
-                <div style={{ fontSize: 48, fontWeight: 600, color: '#111', lineHeight: 1, marginBottom: 8 }}>{item.stat}</div>
+                <div className="stat-number" style={{ fontSize: 48, fontWeight: 600, color: '#111', lineHeight: 1, marginBottom: 8 }}>{item.stat}</div>
                 <div style={{ fontSize: 14, color: '#666' }}>{item.label}</div>
               </div>
             ))}

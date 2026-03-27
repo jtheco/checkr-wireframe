@@ -17,9 +17,9 @@ export default function CriminalRecords() {
   return (
     <Layout>
       {/* HERO */}
-      <section style={{ background: '#fff', padding: '96px 0' }}>
+      <section className="section-hero" style={{ background: '#fff' }}>
         <div className="content-wrap">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
+          <div className="grid-hero">
             <div>
               <span className="eyebrow">Criminal and Public Records Checks</span>
               <h1 style={{ marginBottom: 24 }}>The criminal data layer for trust, safety, and speed.</h1>
@@ -39,7 +39,7 @@ export default function CriminalRecords() {
       </section>
 
       {/* PROBLEM/SOLUTION */}
-      <section style={{ background: '#f8f8f7', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#f8f8f7' }}>
         <div className="content-wrap">
           <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
             <h2 style={{ marginBottom: 16 }}>You can't see the full risk picture without criminal history.</h2>
@@ -51,10 +51,10 @@ export default function CriminalRecords() {
       </section>
 
       {/* BENEFITS */}
-      <section style={{ background: '#fff', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#fff' }}>
         <div className="content-wrap">
           <h2 style={{ marginBottom: 40 }}>Built for risk reduction, not red tape.</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 32 }}>
+          <div className="grid-2col">
             {[
               { h3: 'Cut risk and cost.', p: 'Surface clear risk signals with precision and speed to prevent fraud, loss, and platform abuse.' },
               { h3: 'Drive new revenue.', p: 'Enter high-trust markets, onboard users faster, and offer premium experiences by turning trust and safety into competitive advantages.' },
@@ -74,13 +74,13 @@ export default function CriminalRecords() {
       </section>
 
       {/* CROSS-LINKS (Industries) */}
-      <section style={{ background: '#f8f8f7', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#f8f8f7' }}>
         <div className="content-wrap">
           <h2 style={{ marginBottom: 16 }}>Risk signals, tailored by industry.</h2>
           <p style={{ maxWidth: 640, color: '#555', marginBottom: 40 }}>
             Whether you're sending someone into a home, handing over a $50k vehicle, or enabling in-person interactions, you need insight into who's on your platform to protect your users and business. We tailor criminal data to match the risks that matter in your industry.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16 }}>
+          <div className="grid-4col">
             {industryLinks.map((item) => (
               <Link key={item.to} to={item.to} style={{ border: '1px solid #e5e5e5', borderRadius: 12, padding: 20, background: '#fff', display: 'flex', flexDirection: 'column', textDecoration: 'none', color: 'inherit' }}>
                 <h3 style={{ marginBottom: 8 }}>{item.title}</h3>
@@ -95,7 +95,7 @@ export default function CriminalRecords() {
       </section>
 
       {/* FEATURE GRID */}
-      <section style={{ background: '#fff', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#fff' }}>
         <div className="content-wrap">
           <h2 style={{ marginBottom: 16 }}>Criminal data with no delays or guesswork.</h2>
           <p style={{ maxWidth: 640, color: '#555', marginBottom: 16 }}>
@@ -110,7 +110,7 @@ export default function CriminalRecords() {
           >
             See API documentation →
           </a>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
+          <div className="grid-2col-cards">
             {[
               {
                 title: 'National Criminal Database',
@@ -140,25 +140,25 @@ export default function CriminalRecords() {
       </section>
 
       {/* CREDIBILITY */}
-      <section style={{ background: '#f8f8f7', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#f8f8f7' }}>
         <div className="content-wrap">
           <h2 style={{ marginBottom: 16 }}>The industry's most trusted criminal data.</h2>
           <p style={{ maxWidth: 640, color: '#555', marginBottom: 48 }}>
             Checkr Trust powers over 10 million user screens every month using the industry's most comprehensive criminal and public record data. It's high-signal risk intelligence delivered through flexible APIs and tailored to your policies. No one knows criminal data better.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32, textAlign: 'center', marginBottom: 48 }}>
+          <div className="grid-3col" style={{ textAlign: 'center', marginBottom: 48 }}>
             {[
               { stat: '10M+', label: 'user screens per month' },
               { stat: '2,400+', label: 'criminal data sources' },
               { stat: '99%', label: 'US population coverage' },
             ].map((item) => (
               <div key={item.label}>
-                <div style={{ fontSize: 48, fontWeight: 600, color: '#111', lineHeight: 1, marginBottom: 8 }}>{item.stat}</div>
+                <div className="stat-number" style={{ fontSize: 48, fontWeight: 600, color: '#111', lineHeight: 1, marginBottom: 8 }}>{item.stat}</div>
                 <div style={{ fontSize: 14, color: '#666' }}>{item.label}</div>
               </div>
             ))}
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+          <div className="grid-3col-cards">
             {[
               { h3: 'Unmatched data coverage.', p: '2,400+ sources across every US jurisdiction. Arrest records, court and warrant data, watchlists, sex offender registries—all in one API.' },
               { h3: 'Signal, not noise.', p: 'Our filters let you define what counts as risk so you can focus only on what matters to your business.' },
@@ -174,10 +174,10 @@ export default function CriminalRecords() {
       </section>
 
       {/* SUCCESS STORY (Verkada) */}
-      <section style={{ background: '#fff', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#fff' }}>
         <div className="content-wrap">
           <div style={{ border: '1px solid #e5e5e5', borderRadius: 20, overflow: 'hidden' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+            <div className="grid-story">
               <div style={{ padding: 40, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                 <div style={{ height: 32, width: 96, borderRadius: 6, background: '#e8e8e8', marginBottom: 24, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 600, color: '#aaa' }}>Verkada</div>
                 <h2 style={{ marginBottom: 24 }}>Verkada protects schools with real-time visitor screening.</h2>
@@ -194,7 +194,7 @@ export default function CriminalRecords() {
       </section>
 
       {/* TESTIMONIAL */}
-      <section style={{ background: '#f8f8f7', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#f8f8f7' }}>
         <div className="content-wrap">
           <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
             <div className="quote-block">
