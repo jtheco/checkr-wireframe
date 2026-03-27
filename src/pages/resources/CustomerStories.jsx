@@ -42,7 +42,7 @@ export default function CustomerStories() {
   return (
     <Layout>
       {/* HERO */}
-      <section style={{ background: '#fff', padding: '80px 0', textAlign: 'center' }}>
+      <section className="section-lg" style={{ background: '#fff', textAlign: 'center' }}>
         <div className="content-wrap">
           <div style={{ maxWidth: 640, margin: '0 auto' }}>
             <span className="eyebrow">Customer Stories</span>
@@ -55,9 +55,9 @@ export default function CustomerStories() {
       </section>
 
       {/* STORY GRID */}
-      <section style={{ background: '#f8f8f7', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#f8f8f7' }}>
         <div className="content-wrap">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
+          <div className="grid-2col-cards">
             {stories.map((story) => (
               <Link key={story.to} to={story.to} style={{ border: '1px solid #e5e5e5', borderRadius: 20, overflow: 'hidden', background: '#fff', display: 'flex', flexDirection: 'column', textDecoration: 'none', color: 'inherit' }}>
                 <div className="img-placeholder img-placeholder-wide" style={{ borderRadius: '12px 12px 0 0' }}>

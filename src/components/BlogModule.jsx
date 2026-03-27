@@ -23,7 +23,7 @@ const articles = [
 
 export default function BlogModule() {
   return (
-    <section style={{ background: '#f8f8f7', padding: '80px 0' }}>
+    <section className="section-lg" style={{ background: '#f8f8f7' }}>
       <div className="content-wrap">
         <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: 40, flexWrap: 'wrap', gap: 16 }}>
           <div>

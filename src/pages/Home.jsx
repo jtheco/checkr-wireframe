@@ -60,9 +60,9 @@ export default function Home() {
   return (
     <Layout>
       {/* HERO */}
-      <section style={{ background: '#fff', padding: '96px 0' }}>
+      <section className="section-hero" style={{ background: '#fff' }}>
         <div className="content-wrap">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
+          <div className="grid-hero">
             <div>
               <span className="eyebrow">KYx Risk Intelligence Platform</span>
               <h1 style={{ marginBottom: 24 }}>Risk intelligence for every use case.</h1>
@@ -94,7 +94,7 @@ export default function Home() {
       </div>
 
       {/* FEATURE GRID (Products) */}
-      <section style={{ padding: '80px 0', background: '#fff' }}>
+      <section className="section-lg" style={{ background: '#fff' }}>
         <div className="content-wrap">
           <div style={{ maxWidth: 680, margin: '0 auto', textAlign: 'center', marginBottom: 48 }}>
             <h2 style={{ marginBottom: 16 }}>Turn uncertainty into clarity with full-profile KYx products.</h2>
@@ -102,7 +102,7 @@ export default function Home() {
               Checkr Trust combines criminal, identity, and driving data into a complete trust profile, so you can assess individual risk, protect your business, and make faster, safer decisions at scale.
             </p>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+          <div className="grid-3col-cards">
             <Link to="/products/criminal-and-public-records-checks" style={{ border: '1px solid #e5e5e5', borderRadius: 16, padding: 28, background: '#fff', textDecoration: 'none', color: 'inherit', display: 'block' }}>
               <div className="icon-placeholder" />
               <h3 style={{ marginBottom: 8 }}>Criminal and Public Records</h3>
@@ -126,7 +126,7 @@ export default function Home() {
       </section>
 
       {/* ROLLOVER STRIP */}
-      <section style={{ padding: '64px 0', background: '#f8f8f7' }}>
+      <section className="section-lg" style={{ background: '#f8f8f7' }}>
         <div className="content-wrap">
           <h2 style={{ marginBottom: 32 }}>Customers who chose trust as a growth strategy.</h2>
           <div style={{ borderTop: '1px solid #e5e5e5' }}>
@@ -134,12 +134,13 @@ export default function Home() {
               <Link
                 key={story.to}
                 to={story.to}
-                style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px 16px', margin: '0 -16px', gap: 24, borderBottom: '1px solid #e5e5e5', textDecoration: 'none', borderRadius: 8, transition: 'background 0.15s' }}
+                className="rollover-row"
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px 16px', margin: '0 -16px', gap: 24, borderBottom: '1px solid #e5e5e5', textDecoration: 'none', borderRadius: 8, transition: 'background 0.15s', flexWrap: 'wrap' }}
                 onMouseEnter={e => e.currentTarget.style.background = '#f4f4f3'}
                 onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
               >
                 <span style={{ fontSize: 12, fontWeight: 700, color: '#999', flexShrink: 0, width: 120, letterSpacing: '0.04em', textTransform: 'uppercase' }}>{story.company}</span>
-                <span style={{ fontSize: 16, fontWeight: 500, color: '#111', flex: 1 }}>{story.headline}</span>
+                <span style={{ fontSize: 16, fontWeight: 500, color: '#111', flex: 1, minWidth: 200 }}>{story.headline}</span>
                 <span style={{ color: '#999', flexShrink: 0, fontSize: 18 }}>→</span>
               </Link>
             ))}
@@ -148,7 +149,7 @@ export default function Home() {
       </section>
 
       {/* CREDIBILITY */}
-      <section style={{ padding: '80px 0', background: '#fff' }}>
+      <section className="section-lg" style={{ background: '#fff' }}>
         <div className="content-wrap">
           <div style={{ maxWidth: 640, marginBottom: 48 }}>
             <h2 style={{ marginBottom: 16 }}>Built for decision-makers who can't afford blindspots.</h2>
@@ -156,7 +157,7 @@ export default function Home() {
               Checkr built one of the industry's fastest, most accurate background check infrastructures. Checkr Trust gives businesses access to the same best-in-class criminal, identity, and driving data so you can screen customers quickly and confidently, with zero guesswork.
             </p>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32 }}>
+          <div className="grid-3col">
             {[
               { h3: 'Unmatched criminal data coverage', p: '2,400+ sources across every US jurisdiction, 99% coverage of the US population in our database' },
               { h3: 'Frictionless identity checks', p: '9B+ authoritative records, near-instant returns' },
@@ -178,10 +179,10 @@ export default function Home() {
       </section>
 
       {/* CROSS-LINKS (Industries) */}
-      <section style={{ padding: '80px 0', background: '#f8f8f7' }}>
+      <section className="section-lg" style={{ background: '#f8f8f7' }}>
         <div className="content-wrap">
           <h2 style={{ marginBottom: 40 }}>Risk looks different in every industry. We tailor KYx to match.</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16 }}>
+          <div className="grid-4col">
             {industryLinks.map((item) => (
               <Link key={item.to} to={item.to} style={{ border: '1px solid #e5e5e5', borderRadius: 12, padding: 20, background: '#fff', display: 'flex', flexDirection: 'column', textDecoration: 'none', color: 'inherit' }}>
                 <span className="eyebrow">{item.eyebrow}</span>
@@ -196,9 +197,9 @@ export default function Home() {
       </section>
 
       {/* API MODULE (homepage variant with numbered steps) */}
-      <section style={{ padding: '80px 0', background: '#fff' }}>
+      <section className="section-lg" style={{ background: '#fff' }}>
         <div className="content-wrap">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'flex-start' }}>
+          <div className="grid-hero" style={{ alignItems: 'flex-start' }}>
             <div>
               <span className="eyebrow">Developer-first</span>
               <h2 style={{ marginBottom: 16 }}>Clear signal. Low friction. High volume.</h2>
@@ -236,7 +237,7 @@ export default function Home() {
       </section>
 
       {/* CUSTOMER STORIES PREVIEW */}
-      <section style={{ padding: '80px 0', background: '#f8f8f7' }}>
+      <section className="section-lg" style={{ background: '#f8f8f7' }}>
         <div className="content-wrap">
           <div style={{ maxWidth: 640, marginBottom: 32 }}>
             <h2 style={{ marginBottom: 16 }}>Go from guessing to knowing to results.</h2>
@@ -244,7 +245,7 @@ export default function Home() {
               Checkr Trust helps high-trust businesses reduce fraud, increase revenue, and protect their brand. Screen customers at scale to get risk intelligence that boosts revenue, growth, and retention.
             </p>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 32 }}>
+          <div className="grid-2col" style={{ marginBottom: 32 }}>
             {[
               'Reduce fraud and chargebacks in high-value rentals',
               'Improve user safety and retention',
@@ -266,10 +267,10 @@ export default function Home() {
       </section>
 
       {/* FEATURED STORY (Tawkify) */}
-      <section style={{ padding: '80px 0', background: '#fff' }}>
+      <section className="section-lg" style={{ background: '#fff' }}>
         <div className="content-wrap">
           <div style={{ border: '1px solid #e5e5e5', borderRadius: 20, overflow: 'hidden' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+            <div className="grid-story">
               <div style={{ padding: 40, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                 <div style={{ height: 32, width: 96, borderRadius: 6, background: '#e8e8e8', marginBottom: 24, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 600, color: '#aaa' }}>Tawkify</div>
                 <h2 style={{ marginBottom: 16 }}>Tawkify sets a new standard in dating safety.</h2>

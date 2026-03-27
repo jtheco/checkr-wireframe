@@ -17,9 +17,9 @@ export default function IdentityChecks() {
   return (
     <Layout>
       {/* HERO */}
-      <section style={{ background: '#fff', padding: '96px 0' }}>
+      <section className="section-hero" style={{ background: '#fff' }}>
         <div className="content-wrap">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
+          <div className="grid-hero">
             <div>
               <span className="eyebrow">Identity Checks</span>
               <h1 style={{ marginBottom: 24 }}>The identity data layer for safer, smarter verification.</h1>
@@ -36,7 +36,7 @@ export default function IdentityChecks() {
       </section>
 
       {/* PROBLEM/SOLUTION */}
-      <section style={{ background: '#f8f8f7', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#f8f8f7' }}>
         <div className="content-wrap">
           <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
             <h2 style={{ marginBottom: 16 }}>Identity verification alone is not enough.</h2>
@@ -48,10 +48,10 @@ export default function IdentityChecks() {
       </section>
 
       {/* BENEFITS */}
-      <section style={{ background: '#fff', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#fff' }}>
         <div className="content-wrap">
           <h2 style={{ marginBottom: 40 }}>Built to reduce friction, fraud, and false trust.</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 32 }}>
+          <div className="grid-2col">
             {[
               { h3: 'Stop synthetic and stolen identities.', p: 'Validate identity data against authoritative sources and flag mismatches before fraud reaches your business.' },
               { h3: 'Increase conversion without increasing risk.', p: 'Verify most users passively—without document uploads—to reduce drop-off without sacrificing trust.' },
@@ -71,10 +71,10 @@ export default function IdentityChecks() {
       </section>
 
       {/* CROSS-LINKS */}
-      <section style={{ background: '#f8f8f7', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#f8f8f7' }}>
         <div className="content-wrap">
           <h2 style={{ marginBottom: 40 }}>Tailored for high-trust use cases.</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16 }}>
+          <div className="grid-4col">
             {industryLinks.map((item) => (
               <Link key={item.to} to={item.to} style={{ border: '1px solid #e5e5e5', borderRadius: 12, padding: 20, background: '#fff', display: 'flex', flexDirection: 'column', textDecoration: 'none', color: 'inherit' }}>
                 <h3 style={{ marginBottom: 8 }}>{item.title}</h3>
@@ -89,7 +89,7 @@ export default function IdentityChecks() {
       </section>
 
       {/* FEATURE GRID */}
-      <section style={{ background: '#fff', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#fff' }}>
         <div className="content-wrap">
           <h2 style={{ marginBottom: 16 }}>Two layers of trust. One flexible platform.</h2>
           <p style={{ maxWidth: 640, color: '#555', marginBottom: 16 }}>
@@ -104,7 +104,7 @@ export default function IdentityChecks() {
           >
             See API documentation →
           </a>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
+          <div className="grid-2col-cards">
             <div style={{ border: '1px solid #e5e5e5', borderRadius: 16, padding: 28, background: '#fff' }}>
               <div className="icon-placeholder" />
               <h3 style={{ marginBottom: 8 }}>PII Validation</h3>
@@ -152,13 +152,13 @@ export default function IdentityChecks() {
       </section>
 
       {/* CREDIBILITY */}
-      <section style={{ background: '#f8f8f7', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#f8f8f7' }}>
         <div className="content-wrap">
           <h2 style={{ marginBottom: 16 }}>Real identity. Proven infrastructure. Beyond fast.</h2>
           <p style={{ maxWidth: 640, color: '#555', marginBottom: 40 }}>
             Checkr Trust powers over 10 million user screens every month. It brings enterprise-grade identity verification to your platform by combining authoritative data, document checks, and biometrics in one seamless flow.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+          <div className="grid-3col-cards">
             {[
               { h3: 'High-scale identity decisions.', p: 'Sub-second performance across PII and biometric checks, so you reduce drop-off without compromising confidence.' },
               { h3: 'Holistic risk intelligence.', p: "Pair identity verification with criminal screening to understand not just who someone is, but whether they're safe." },
@@ -174,10 +174,10 @@ export default function IdentityChecks() {
       </section>
 
       {/* SUCCESS STORY (Tawkify) */}
-      <section style={{ background: '#fff', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#fff' }}>
         <div className="content-wrap">
           <div style={{ border: '1px solid #e5e5e5', borderRadius: 20, overflow: 'hidden' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+            <div className="grid-story">
               <div style={{ padding: 40, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                 <div style={{ height: 32, width: 96, borderRadius: 6, background: '#e8e8e8', marginBottom: 24, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 600, color: '#aaa' }}>Tawkify</div>
                 <h2 style={{ marginBottom: 24 }}>Tawkify sets a new standard in dating safety.</h2>
@@ -194,7 +194,7 @@ export default function IdentityChecks() {
       </section>
 
       {/* TESTIMONIAL */}
-      <section style={{ background: '#f8f8f7', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#f8f8f7' }}>
         <div className="content-wrap">
           <div className="quote-block" style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
             <div style={{ width: 52, height: 52, borderRadius: '50%', background: '#e0e0e0', margin: '0 auto 24px' }} />

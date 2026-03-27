@@ -9,9 +9,9 @@ export default function VisitorManagement() {
   return (
     <Layout>
       {/* HERO */}
-      <section style={{ background: '#fff', padding: '96px 0' }}>
+      <section className="section-hero" style={{ background: '#fff' }}>
         <div className="content-wrap">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
+          <div className="grid-hero">
             <div>
               <span className="eyebrow">KYx for Visitor Management Systems</span>
               <h1 style={{ marginBottom: 24 }}>Bring risk intelligence to every check-in.</h1>
@@ -28,7 +28,7 @@ export default function VisitorManagement() {
       </section>
 
       {/* PROBLEM/SOLUTION */}
-      <section style={{ background: '#f8f8f7', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#f8f8f7' }}>
         <div className="content-wrap">
           <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
             <h2 style={{ marginBottom: 16 }}>A name alone doesn't reveal risk.</h2>
@@ -40,13 +40,13 @@ export default function VisitorManagement() {
       </section>
 
       {/* FEATURE GRID (Products) */}
-      <section style={{ background: '#fff', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#fff' }}>
         <div className="content-wrap">
           <h2 style={{ marginBottom: 16 }}>The KYx safety stack for Visitor Management Systems.</h2>
           <p style={{ maxWidth: 640, color: '#555', marginBottom: 40 }}>
             Checkr Trust delivers real-time insights from multiple layers of customer risk—criminal, sex offender, identity, and watchlist data—all through one flexible integration.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+          <div className="grid-3col-cards">
             {[
               {
                 title: 'National Criminal Database',
@@ -88,7 +88,7 @@ export default function VisitorManagement() {
       </section>
 
       {/* TESTIMONIAL */}
-      <section style={{ background: '#f8f8f7', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#f8f8f7' }}>
         <div className="content-wrap">
           <div className="quote-block" style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
             <div style={{ width: 52, height: 52, borderRadius: '50%', background: '#e0e0e0', margin: '0 auto 24px' }} />
@@ -108,17 +108,17 @@ export default function VisitorManagement() {
       <DashboardModule />
 
       {/* STATS */}
-      <section style={{ background: '#fff', padding: '80px 0' }}>
+      <section className="section-lg" style={{ background: '#fff' }}>
         <div className="content-wrap">
           <h2 style={{ marginBottom: 40 }}>Why leading VMS and security platforms choose Checkr Trust.</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32, marginBottom: 40 }}>
+          <div className="grid-3col" style={{ marginBottom: 40 }}>
             {[
               { stat: '99%', label: 'US identity verification coverage' },
               { stat: '2,400+', label: 'criminal data sources in real time' },
               { stat: 'Instant', label: 'seamless API integration into check-in flows' },
             ].map((item) => (
               <div key={item.label} style={{ textAlign: 'center' }}>
-                <div style={{ fontSize: 48, fontWeight: 600, color: '#111', lineHeight: 1, marginBottom: 8 }}>{item.stat}</div>
+                <div className="stat-number" style={{ fontSize: 48, fontWeight: 600, color: '#111', lineHeight: 1, marginBottom: 8 }}>{item.stat}</div>
                 <div style={{ fontSize: 14, color: '#666' }}>{item.label}</div>
               </div>
             ))}

@@ -5,7 +5,7 @@ export default function CTABanner({
   body = 'Get a live walkthrough to see how Checkr Trust KYx products reduce risk, protect users, and unlock growth.',
 }) {
   return (
-    <section style={{ background: '#0a0a0a', padding: '80px 0' }}>
+    <section className="section-lg" style={{ background: '#0a0a0a' }}>
       <div className="content-wrap" style={{ maxWidth: 720, textAlign: 'center' }}>
         <h2 style={{ color: '#fff', marginBottom: 16 }}>{headline}</h2>
         <p style={{ color: '#888', fontSize: 17, marginBottom: 36, lineHeight: 1.7 }}>{body}</p>

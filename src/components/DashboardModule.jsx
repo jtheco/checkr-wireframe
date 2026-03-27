@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom'
 
 export default function DashboardModule() {
   return (
-    <section style={{ background: '#f8f8f7', padding: '80px 0' }}>
+    <section className="section-lg" style={{ background: '#f8f8f7' }}>
       <div className="content-wrap">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
+        <div className="grid-hero">
           <div>
             <span className="eyebrow">No integration required</span>
             <h2 style={{ marginBottom: 16 }}>Start screening in minutes, with no integration needed.</h2>

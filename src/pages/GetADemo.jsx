@@ -76,7 +76,7 @@ export default function GetADemo() {
             <div>
               <h2 className="mb-6">Connect with our sales team to schedule your demo.</h2>
               <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="firstName" className={labelClass}>First name</label>
                     <input

@@ -1,8 +1,8 @@
 export default function ApiModule({ headline = 'Real-time risk intelligence, built into your workflow.', body }) {
   return (
-    <section style={{ background: '#fff', padding: '80px 0' }}>
+    <section className="section-lg" style={{ background: '#fff' }}>
       <div className="content-wrap">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
+        <div className="grid-hero">
           <div>
             <span className="eyebrow">API-first platform</span>
             <h2 style={{ marginBottom: 16 }}>{headline}</h2>
