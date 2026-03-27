@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+/* ── Reset ─────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Design tokens ──────────────────────────────────── */
+:root {
+  --color-text:       #111;
+  --color-text-muted: #666;
+  --color-text-hint:  #999;
+  --color-border:     #e5e5e5;
+  --color-surface:    #f8f8f7;
+  --color-bg:         #ffffff;
+
+  --radius-default:   6px;
+  --radius-card:      10px;
+
+  --content-max:      1120px;
+  --content-px:       40px;
+}
+
+/* ── Base ───────────────────────────────────────────── */
+html {
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Type scale ─────────────────────────────────────── */
+h1 {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* Eyebrow / label utility */
+.label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #888;
+}
+
+/* ── Layout helpers ─────────────────────────────────── */
+.content-wrap {
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding-inline: var(--content-px);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

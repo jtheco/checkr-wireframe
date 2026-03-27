@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Bash(npx create-vite@latest . --template react --force)",
+      "Bash(npx create-vite@latest /tmp/checkr-scaffold --template react)",
+      "Read(//tmp/**)",
+      "Bash(mv /Users/jthelms/conductor/repos/checkr-wireframe/tmp/checkr-scaffold/* /Users/jthelms/conductor/repos/checkr-wireframe/tmp/checkr-scaffold/.gitignore /Users/jthelms/conductor/repos/checkr-wireframe/)",
+      "Bash(mv /Users/jthelms/conductor/repos/checkr-wireframe/tmp/checkr-scaffold/.* /Users/jthelms/conductor/repos/checkr-wireframe/)",
+      "Bash(npm install:*)",
+      "Bash(for f:*)",
+      "Bash(do)",
+      "Bash(sed -i '' \"s|''../../components/Layout''|''../components/Layout''|g\" \"/Users/jthelms/conductor/repos/checkr-wireframe/src/pages/$f\")",
+      "Bash(echo \"Fixed $f\")",
+      "Bash(done)",
+      "Bash(npm run:*)",
+      "Bash(kill %1)",
+      "mcp__42f2c61e-b296-47de-8d07-bce07cf20c29__deploy_to_vercel",
+      "Bash(vercel deploy:*)",
+      "Bash(npx vercel:*)",
+      "Bash(gh auth:*)",
+      "Bash(git --version)",
+      "Bash(git init:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}
