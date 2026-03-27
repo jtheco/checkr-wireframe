@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, useCallback } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
 const PRODUCTS = [
@@ -28,7 +28,7 @@ const RESOURCES = [
 function Dropdown({ items }) {
   return (
     <div
-      className="absolute top-full left-0 mt-1 bg-white border border-[#e5e5e5] rounded-[6px] shadow-lg py-1 min-w-[240px] z-50"
+      className="absolute top-full left-0 mt-0 bg-white border border-[#e5e5e5] rounded-[6px] shadow-lg py-1 min-w-[240px] z-50"
     >
       {items.map((item) => {
         if (item.disabled) {
@@ -72,21 +72,25 @@ function Dropdown({ items }) {
 function NavDropdown({ label, items }) {
   const [open, setOpen] = useState(false)
   const ref = useRef(null)
+  const closeTimer = useRef(null)
 
-  useEffect(() => {
-    function handler(e) {
-      if (ref.current && !ref.current.contains(e.target)) setOpen(false)
-    }
-    document.addEventListener('mousedown', handler)
-    return () => document.removeEventListener('mousedown', handler)
+  const handleEnter = useCallback(() => {
+    clearTimeout(closeTimer.current)
+    setOpen(true)
   }, [])
+
+  const handleLeave = useCallback(() => {
+    closeTimer.current = setTimeout(() => setOpen(false), 180)
+  }, [])
+
+  useEffect(() => () => clearTimeout(closeTimer.current), [])
 
   return (
     <div
       ref={ref}
       className="relative"
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
+      onMouseEnter={handleEnter}
+      onMouseLeave={handleLeave}
     >
       <button
         className="flex items-center gap-1 text-[14px] text-[#333] hover:text-[#111] py-1 transition-colors"

@@ -2,60 +2,53 @@ import { Link } from 'react-router-dom'
 
 const articles = [
   {
-    slug: 'vehicle-sharing-criminal-data',
+    title: 'How Real-Time Criminal Data Reduces Fraud in Vehicle Sharing',
     tag: 'Vehicle Sharing',
     date: 'Jan 14, 2026',
-    title: 'How Real-Time Criminal Data Reduces Fraud in Vehicle Sharing',
+    slug: 'criminal-data-vehicle-sharing',
   },
   {
-    slug: 'dating-identity-verification',
+    title: "Why Identity Verification Alone Isn't Enough for Dating Platforms",
     tag: 'Online Dating',
     date: 'Feb 3, 2026',
-    title: "Why Identity Verification Alone Isn't Enough for Dating Platforms",
+    slug: 'identity-verification-dating',
   },
   {
-    slug: 'str-roi-of-trust',
+    title: 'The ROI of Trust: Screening Guests Before Check-In Pays Off',
     tag: 'Short-Term Rentals',
     date: 'Mar 5, 2026',
-    title: 'The ROI of Trust: Screening Guests Before Check-In Pays Off',
+    slug: 'roi-of-trust-str',
   },
 ]
 
 export default function BlogModule() {
   return (
-    <section className="py-16 bg-[#f8f8f7]">
+    <section style={{ background: '#f8f8f7', padding: '80px 0' }}>
       <div className="content-wrap">
-        <div className="flex items-end justify-between mb-8">
-          <h2 style={{ maxWidth: 480 }}>Explore the latest insights on KYx risk intelligence.</h2>
-          <Link
-            to="/blog"
-            className="text-sm text-[#111] hover:text-[#333] transition-colors whitespace-nowrap ml-6"
-          >
-            All Blog articles →
+        <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: 40, flexWrap: 'wrap', gap: 16 }}>
+          <div>
+            <span className="eyebrow">From the blog</span>
+            <h2 style={{ margin: 0 }}>Explore the latest insights on KYx risk intelligence.</h2>
+          </div>
+          <Link to="/blog" style={{ fontSize: 14, fontWeight: 600, color: '#111', textDecoration: 'none', whiteSpace: 'nowrap' }}>
+            All blog articles →
           </Link>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {articles.map((article) => (
-            <div
-              key={article.slug}
-              className="border border-[#e5e5e5] rounded-[10px] p-5 bg-white flex flex-col"
-            >
-              <div className="w-full aspect-video bg-[#e5e5e5] rounded-[6px] flex items-center justify-center text-sm text-[#999] mb-3">
-                Article image
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 24 }}>
+          {articles.map((a) => (
+            <Link key={a.slug} to={`/blog/${a.slug}`} style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', background: '#fff', borderRadius: 16, border: '1px solid #e5e5e5', overflow: 'hidden', transition: 'border-color 0.15s' }}>
+              <div className="img-placeholder img-placeholder-wide" style={{ borderRadius: '12px 12px 0 0' }}>
+                [Article image]
               </div>
-              <div className="flex items-center gap-2 mb-2">
-                <span className="label">{article.tag}</span>
-                <span className="text-[#bbb] text-xs">·</span>
-                <span className="text-xs text-[#999]">{article.date}</span>
+              <div style={{ padding: '20px 24px 24px' }}>
+                <span style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#999', display: 'block', marginBottom: 8 }}>{a.tag}</span>
+                <h3 style={{ fontSize: 16, fontWeight: 600, color: '#111', lineHeight: 1.4, marginBottom: 12 }}>{a.title}</h3>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <span style={{ fontSize: 13, color: '#aaa' }}>{a.date}</span>
+                  <span style={{ fontSize: 13, fontWeight: 600, color: '#555' }}>Read article →</span>
+                </div>
               </div>
-              <h3 className="mb-3 flex-1">{article.title}</h3>
-              <Link
-                to={`/blog/${article.slug}`}
-                className="text-sm text-[#111] hover:text-[#333] transition-colors"
-              >
-                Read article →
-              </Link>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

@@ -48,122 +48,129 @@ const industryLinks = [
   },
 ]
 
+const customerStories = [
+  { company: 'Tawkify', headline: 'Tawkify sets a new standard in dating safety', to: '/resources/customer-stories/tawkify' },
+  { company: 'Carefully', headline: 'Carefully builds a trusted ecosystem for childcare', to: '/resources/customer-stories/carefully' },
+  { company: 'Verkada', headline: 'Verkada protects schools with real-time visitor screening', to: '/resources/customer-stories/verkada' },
+  { company: 'Alert Enterprise', headline: 'Alert Enterprise streamlines visitor management with instant criminal data', to: '/resources/customer-stories/alert-enterprise' },
+  { company: 'Hulah', headline: 'Hulah keeps dangerous predators off its dating platform', to: '/resources/customer-stories/hulah' },
+]
+
 export default function Home() {
   return (
     <Layout>
       {/* HERO */}
-      <section className="py-20 bg-white">
+      <section style={{ background: '#fff', padding: '96px 0' }}>
         <div className="content-wrap">
-          <h1 className="mb-5" style={{ maxWidth: '42rem' }}>Risk intelligence for every use case.</h1>
-          <p className="mb-8" style={{ maxWidth: '42rem', color: '#666' }}>
-            Checkr Trust is a KYx risk intelligence platform, built on industry-leading criminal, identity, and driving data, that helps businesses protect customers, drive revenue, and scale with confidence.
-          </p>
-          <Link
-            to="/get-a-demo"
-            className="inline-flex items-center px-5 py-2.5 bg-[#111] text-white text-sm rounded-[6px] hover:bg-[#333] transition-colors"
-          >
-            Get a demo
-          </Link>
-        </div>
-      </section>
-
-      {/* FEATURE-GRID */}
-      <section className="bg-[#f8f8f7] py-16">
-        <div className="content-wrap">
-          <h2 className="mb-3">Turn uncertainty into clarity with full-profile KYx products.</h2>
-          <p className="mb-8" style={{ maxWidth: '640px', color: '#666' }}>
-            Checkr Trust combines criminal, identity, and driving data into a complete trust profile, so you can assess individual risk, protect your business, and make faster, safer decisions at scale.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            <div className="border border-[#e5e5e5] rounded-[10px] p-5 bg-white flex flex-col">
-              <div className="w-7 h-7 bg-[#e5e5e5] rounded mb-3" />
-              <h3 className="mb-2">Criminal and Public Records</h3>
-              <p className="mb-4 flex-1">Flag high-risk and violent actors with unmatched coverage and clarity.</p>
-              <Link to="/products/criminal-and-public-records-checks" className="text-sm text-[#111] hover:text-[#333] transition-colors">
-                More about Criminal and Public Records Checks →
-              </Link>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
+            <div>
+              <span className="eyebrow">KYx Risk Intelligence Platform</span>
+              <h1 style={{ marginBottom: 24 }}>Risk intelligence for every use case.</h1>
+              <p style={{ fontSize: 18, color: '#555', marginBottom: 32, lineHeight: 1.7 }}>
+                Checkr Trust is a KYx risk intelligence platform, built on industry-leading criminal, identity, and driving data, that helps businesses protect customers, drive revenue, and scale with confidence.
+              </p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
+                <Link to="/get-a-demo" className="btn-primary">Get a demo</Link>
+                <a href="https://docs.checkrtrust.com" target="_blank" rel="noopener noreferrer" className="btn-secondary">See API docs</a>
+              </div>
             </div>
-            <div className="border border-[#e5e5e5] rounded-[10px] p-5 bg-white flex flex-col">
-              <div className="w-7 h-7 bg-[#e5e5e5] rounded mb-3" />
-              <h3 className="mb-2">Identity Verification</h3>
-              <p className="mb-4 flex-1">Reduce fraud by confirming real identities using billions of authoritative records with 99% US coverage.</p>
-              <Link to="/products/identity-checks" className="text-sm text-[#111] hover:text-[#333] transition-colors">
-                More about Identity Checks →
-              </Link>
-            </div>
-            <div className="border border-[#e5e5e5] rounded-[10px] p-5 bg-white flex flex-col">
-              <div className="w-7 h-7 bg-[#e5e5e5] rounded mb-3" />
-              <h3 className="mb-2">Driving History</h3>
-              <p className="mb-4 flex-1">Reduce accidents, fraud, and theft by screening drivers for license status, violations, and crash history.</p>
-              <Link to="/products/driver-checks" className="text-sm text-[#111] hover:text-[#333] transition-colors">
-                More about Driver Checks →
-              </Link>
+            <div>
+              <div className="img-placeholder img-placeholder-hero">[Product screenshot]</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* LOGO-01 */}
-      <section className="py-12 bg-white">
+      {/* LOGO BAR */}
+      <div style={{ borderTop: '1px solid #e5e5e5', borderBottom: '1px solid #e5e5e5', padding: '24px 0', background: '#fff' }}>
         <div className="content-wrap">
-          <p className="text-sm text-[#888] mb-5">Trusted by:</p>
-          <div className="flex flex-wrap gap-3">
+          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 24 }}>
+            <p style={{ fontSize: 13, color: '#888', marginRight: 8, flexShrink: 0 }}>Trusted by leading platforms:</p>
             {['Envoy', 'Carefully', 'Turo', 'Tawkify', 'Hulah'].map((name) => (
-              <span key={name} className="inline-flex items-center px-3 py-1.5 bg-[#f0f0f0] rounded text-sm font-medium text-[#555]">
-                {name}
-              </span>
+              <div key={name} style={{ height: 32, width: 96, borderRadius: 6, background: '#e8e8e8', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 600, color: '#aaa' }} title={name}>{name}</div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* FEATURE GRID (Products) */}
+      <section style={{ padding: '80px 0', background: '#fff' }}>
+        <div className="content-wrap">
+          <div style={{ maxWidth: 680, margin: '0 auto', textAlign: 'center', marginBottom: 48 }}>
+            <h2 style={{ marginBottom: 16 }}>Turn uncertainty into clarity with full-profile KYx products.</h2>
+            <p style={{ color: '#555' }}>
+              Checkr Trust combines criminal, identity, and driving data into a complete trust profile, so you can assess individual risk, protect your business, and make faster, safer decisions at scale.
+            </p>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+            <div style={{ border: '1px solid #e5e5e5', borderRadius: 16, padding: 28, background: '#fff' }}>
+              <div className="icon-placeholder" />
+              <h3 style={{ marginBottom: 8 }}>Criminal and Public Records</h3>
+              <p style={{ fontSize: 15, marginBottom: 16 }}>Flag high-risk and violent actors with unmatched coverage and clarity.</p>
+              <Link to="/products/criminal-and-public-records-checks" style={{ fontSize: 14, fontWeight: 500, color: '#111', textDecoration: 'none' }}>More about Criminal and Public Records Checks →</Link>
+            </div>
+            <div style={{ border: '1px solid #e5e5e5', borderRadius: 16, padding: 28, background: '#fff' }}>
+              <div className="icon-placeholder" />
+              <h3 style={{ marginBottom: 8 }}>Identity Verification</h3>
+              <p style={{ fontSize: 15, marginBottom: 16 }}>Reduce fraud by confirming real identities using billions of authoritative records with 99% US coverage.</p>
+              <Link to="/products/identity-checks" style={{ fontSize: 14, fontWeight: 500, color: '#111', textDecoration: 'none' }}>More about Identity Checks →</Link>
+            </div>
+            <div style={{ border: '1px solid #e5e5e5', borderRadius: 16, padding: 28, background: '#fff' }}>
+              <div className="icon-placeholder" />
+              <h3 style={{ marginBottom: 8 }}>Driving History</h3>
+              <p style={{ fontSize: 15, marginBottom: 16 }}>Reduce accidents, fraud, and theft by screening drivers for license status, violations, and crash history.</p>
+              <Link to="/products/driver-checks" style={{ fontSize: 14, fontWeight: 500, color: '#111', textDecoration: 'none' }}>More about Driver Checks →</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ROLLOVER STRIP */}
+      <section style={{ padding: '64px 0', background: '#f8f8f7' }}>
+        <div className="content-wrap">
+          <h2 style={{ marginBottom: 32 }}>Customers who chose trust as a growth strategy.</h2>
+          <div style={{ borderTop: '1px solid #e5e5e5' }}>
+            {customerStories.map((story) => (
+              <Link
+                key={story.to}
+                to={story.to}
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px 16px', margin: '0 -16px', gap: 24, borderBottom: '1px solid #e5e5e5', textDecoration: 'none', borderRadius: 8, transition: 'background 0.15s' }}
+                onMouseEnter={e => e.currentTarget.style.background = '#f4f4f3'}
+                onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
+              >
+                <span style={{ fontSize: 12, fontWeight: 700, color: '#999', flexShrink: 0, width: 120, letterSpacing: '0.04em', textTransform: 'uppercase' }}>{story.company}</span>
+                <span style={{ fontSize: 16, fontWeight: 500, color: '#111', flex: 1 }}>{story.headline}</span>
+                <span style={{ color: '#999', flexShrink: 0, fontSize: 18 }}>→</span>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ROLLOVER-LOGO-01 */}
-      <section className="bg-[#f8f8f7] py-16">
+      {/* CREDIBILITY */}
+      <section style={{ padding: '80px 0', background: '#fff' }}>
         <div className="content-wrap">
-          <div className="space-y-4">
-            <Link to="/resources/customer-stories/tawkify" className="flex items-center justify-between border border-[#e5e5e5] rounded-[10px] px-5 py-4 bg-white hover:border-[#ccc] transition-colors">
-              <span className="text-sm font-medium">Tawkify sets a new standard in dating safety</span>
-              <span className="text-[#888]">→</span>
-            </Link>
-            <Link to="/resources/customer-stories/carefully" className="flex items-center justify-between border border-[#e5e5e5] rounded-[10px] px-5 py-4 bg-white hover:border-[#ccc] transition-colors">
-              <span className="text-sm font-medium">Carefully builds a trusted ecosystem for childcare</span>
-              <span className="text-[#888]">→</span>
-            </Link>
-            <Link to="/resources/customer-stories/verkada" className="flex items-center justify-between border border-[#e5e5e5] rounded-[10px] px-5 py-4 bg-white hover:border-[#ccc] transition-colors">
-              <span className="text-sm font-medium">Verkada protects schools with real-time visitor screening</span>
-              <span className="text-[#888]">→</span>
-            </Link>
-            <Link to="/resources/customer-stories/alert-enterprise" className="flex items-center justify-between border border-[#e5e5e5] rounded-[10px] px-5 py-4 bg-white hover:border-[#ccc] transition-colors">
-              <span className="text-sm font-medium">Alert Enterprise streamlines visitor management with instant criminal data</span>
-              <span className="text-[#888]">→</span>
-            </Link>
-            <Link to="/resources/customer-stories/hulah" className="flex items-center justify-between border border-[#e5e5e5] rounded-[10px] px-5 py-4 bg-white hover:border-[#ccc] transition-colors">
-              <span className="text-sm font-medium">Hulah keeps dangerous predators off its dating platform</span>
-              <span className="text-[#888]">→</span>
-            </Link>
+          <div style={{ maxWidth: 640, marginBottom: 48 }}>
+            <h2 style={{ marginBottom: 16 }}>Built for decision-makers who can't afford blindspots.</h2>
+            <p style={{ color: '#555' }}>
+              Checkr built one of the industry's fastest, most accurate background check infrastructures. Checkr Trust gives businesses access to the same best-in-class criminal, identity, and driving data so you can screen customers quickly and confidently, with zero guesswork.
+            </p>
           </div>
-        </div>
-      </section>
-
-      {/* CREDIBILITY-01 */}
-      <section className="py-16 bg-white">
-        <div className="content-wrap">
-          <h2 className="mb-3">Built for decision-makers who can't afford blindspots.</h2>
-          <p className="mb-10" style={{ maxWidth: '640px', color: '#666' }}>
-            Checkr built one of the industry's fastest, most accurate background check infrastructures. Checkr Trust gives businesses access to the same best-in-class criminal, identity, and driving data so you can screen customers quickly and confidently, with zero guesswork.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32 }}>
             {[
               { h3: 'Unmatched criminal data coverage', p: '2,400+ sources across every US jurisdiction, 99% coverage of the US population in our database' },
               { h3: 'Frictionless identity checks', p: '9B+ authoritative records, near-instant returns' },
-              { h3: 'Real-time driver checks', p: 'Access Motor Vehicle Record data in seconds and save on DMV fees with Driver\'s License Status Checks' },
+              { h3: 'Real-time driver checks', p: "Access Motor Vehicle Record data in seconds and save on DMV fees with Driver's License Status Checks" },
               { h3: 'Enterprise-ready', p: '99.9% uptime, flexible filters, scalable across workflows' },
               { h3: 'Built for your stack', p: 'Clean APIs and fast implementation support' },
               { h3: 'Easy to search', p: 'Launch with a simple dashboard—no integration or coding required' },
             ].map((item) => (
-              <div key={item.h3}>
-                <h3 className="mb-2">{item.h3}</h3>
-                <p style={{ color: '#666' }}>{item.p}</p>
+              <div key={item.h3} style={{ display: 'flex', gap: 16 }}>
+                <div className="icon-sm" style={{ marginTop: 3 }} />
+                <div>
+                  <h3 style={{ marginBottom: 8 }}>{item.h3}</h3>
+                  <p style={{ color: '#666' }}>{item.p}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -171,15 +178,15 @@ export default function Home() {
       </section>
 
       {/* CROSS-LINKS (Industries) */}
-      <section className="bg-[#f8f8f7] py-16">
+      <section style={{ padding: '80px 0', background: '#f8f8f7' }}>
         <div className="content-wrap">
-          <h2 className="mb-10">Risk looks different in every industry. We tailor KYx to match.</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <h2 style={{ marginBottom: 40 }}>Risk looks different in every industry. We tailor KYx to match.</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16 }}>
             {industryLinks.map((item) => (
-              <div key={item.to} className="border border-[#e5e5e5] rounded-[10px] p-5 bg-white flex flex-col">
-                <h3 className="mb-2">{item.eyebrow}</h3>
-                <p className="mb-4 flex-1 text-sm" style={{ color: '#666' }}>{item.desc}</p>
-                <Link to={item.to} className="text-sm text-[#111] hover:text-[#333] transition-colors">
+              <div key={item.to} style={{ border: '1px solid #e5e5e5', borderRadius: 12, padding: 20, background: '#fff', display: 'flex', flexDirection: 'column' }}>
+                <span className="eyebrow">{item.eyebrow}</span>
+                <p style={{ marginBottom: 16, flex: 1, fontSize: 14, color: '#666' }}>{item.desc}</p>
+                <Link to={item.to} style={{ fontSize: 14, fontWeight: 500, color: '#111', textDecoration: 'none' }}>
                   {item.cta}
                 </Link>
               </div>
@@ -188,54 +195,56 @@ export default function Home() {
         </div>
       </section>
 
-      {/* API-MODULE (homepage variant with numbered steps) */}
-      <section className="py-16 bg-white">
+      {/* API MODULE (homepage variant with numbered steps) */}
+      <section style={{ padding: '80px 0', background: '#fff' }}>
         <div className="content-wrap">
-          <div style={{ maxWidth: 680 }}>
-            <h2 className="mb-3">Clear signal. Low friction. High volume.</h2>
-            <p className="mb-8" style={{ color: '#666' }}>
-              Checkr Trust is a unified KYx platform that delivers actionable risk intelligence through one API, in real time and configured to your workflow.
-            </p>
-            <ol className="space-y-5 mb-8">
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'flex-start' }}>
+            <div>
+              <span className="eyebrow">Developer-first</span>
+              <h2 style={{ marginBottom: 16 }}>Clear signal. Low friction. High volume.</h2>
+              <p style={{ fontSize: 17, color: '#555', marginBottom: 32, lineHeight: 1.7 }}>
+                Checkr Trust is a unified KYx platform that delivers actionable risk intelligence through one API, in real time and configured to your workflow.
+              </p>
+              <a
+                href="https://docs.checkrtrust.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                See API documentation →
+              </a>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
               {[
-                { title: 'Integrate via API', desc: 'Fast, flexible implementation designed for modern platforms.' },
-                { title: 'Set your filters', desc: 'Choose the data signals and thresholds that align with your risk model.' },
-                { title: 'Make the call', desc: 'Get real-time, decision-ready insights at scale, without added friction.' },
-              ].map((step, i) => (
-                <li key={step.title} className="flex gap-4">
-                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[#111] text-white text-xs flex items-center justify-center font-medium">
-                    {i + 1}
+                { num: '01', title: 'Integrate via API', desc: 'Fast, flexible implementation designed for modern platforms.' },
+                { num: '02', title: 'Set your filters', desc: 'Choose the data signals and thresholds that align with your risk model.' },
+                { num: '03', title: 'Make the call', desc: 'Get real-time, decision-ready insights at scale, without added friction.' },
+              ].map((step) => (
+                <div key={step.num} style={{ display: 'flex', gap: 20 }}>
+                  <span style={{ flexShrink: 0, width: 36, height: 36, borderRadius: '50%', border: '2px solid #e5e5e5', color: '#999', fontSize: 11, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'monospace', fontWeight: 700 }}>
+                    {step.num}
                   </span>
-                  <div>
-                    <h3 className="mb-1">{step.title}</h3>
+                  <div style={{ paddingTop: 4 }}>
+                    <h3 style={{ marginBottom: 4 }}>{step.title}</h3>
                     <p style={{ color: '#666' }}>{step.desc}</p>
                   </div>
-                </li>
+                </div>
               ))}
-            </ol>
-            <a
-              href="https://docs.checkrtrust.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-5 py-2.5 bg-[#111] text-white text-sm rounded-[6px] hover:bg-[#333] transition-colors"
-            >
-              See API documentation →
-            </a>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* RESOURCES-01 */}
-      <section className="bg-[#f8f8f7] py-16">
+      {/* CUSTOMER STORIES PREVIEW */}
+      <section style={{ padding: '80px 0', background: '#f8f8f7' }}>
         <div className="content-wrap">
-          <h2 className="mb-3">Go from guessing to knowing to results.</h2>
-          <p className="mb-3" style={{ maxWidth: '640px', color: '#666' }}>
-            Checkr Trust helps high-trust businesses reduce fraud, increase revenue, and protect their brand. Screen customers at scale to get risk intelligence that boosts revenue, growth, and retention.
-          </p>
-          <Link to="/resources/customer-stories" className="text-sm text-[#111] hover:text-[#333] transition-colors mb-8 inline-block">
-            See all customer stories →
-          </Link>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4">
+          <div style={{ maxWidth: 640, marginBottom: 32 }}>
+            <h2 style={{ marginBottom: 16 }}>Go from guessing to knowing to results.</h2>
+            <p style={{ color: '#555' }}>
+              Checkr Trust helps high-trust businesses reduce fraud, increase revenue, and protect their brand. Screen customers at scale to get risk intelligence that boosts revenue, growth, and retention.
+            </p>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 32 }}>
             {[
               'Reduce fraud and chargebacks in high-value rentals',
               'Improve user safety and retention',
@@ -244,29 +253,39 @@ export default function Home() {
               'Strengthen underwriting and support BSA compliance for financial services',
               'Streamline operations with seamless API integration',
             ].map((item) => (
-              <div key={item} className="flex items-start gap-2">
-                <span className="text-[#888] mt-0.5">—</span>
+              <div key={item} style={{ display: 'flex', alignItems: 'flex-start', gap: 12 }}>
+                <div className="icon-sm" style={{ marginTop: 3 }} />
                 <p style={{ color: '#444' }}>{item}</p>
               </div>
             ))}
           </div>
+          <Link to="/resources/customer-stories" style={{ fontSize: 14, fontWeight: 600, color: '#111', textDecoration: 'none' }}>
+            See all customer stories →
+          </Link>
         </div>
       </section>
 
-      {/* SUCCESS-STORY-01 (Tawkify) */}
-      <section className="py-16 bg-white">
+      {/* FEATURED STORY (Tawkify) */}
+      <section style={{ padding: '80px 0', background: '#fff' }}>
         <div className="content-wrap">
-          <span className="inline-flex items-center px-3 py-1.5 bg-[#f0f0f0] rounded text-sm font-medium text-[#555] mb-5">
-            Tawkify
-          </span>
-          <h3 className="mb-4" style={{ fontSize: 22, fontWeight: 500 }}>Tawkify sets a new standard in dating safety.</h3>
-          <blockquote className="border-l-4 border-[#e5e5e5] pl-5 italic text-[#444] mb-5" style={{ maxWidth: 600 }}>
-            "Our clients truly appreciate this added layer of security. It's one of the key reasons why they choose Tawkify—they trust us to prioritize their safety and well-being while helping them build meaningful, lasting connections with others."
-          </blockquote>
-          <p className="text-sm text-[#666] mb-5">Chris Kumar, CEO, Tawkify</p>
-          <Link to="/resources/customer-stories/tawkify" className="text-sm text-[#111] hover:text-[#333] transition-colors">
-            Read story →
-          </Link>
+          <div style={{ border: '1px solid #e5e5e5', borderRadius: 20, overflow: 'hidden' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+              <div style={{ padding: 40, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                <div style={{ height: 32, width: 96, borderRadius: 6, background: '#e8e8e8', marginBottom: 24, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 600, color: '#aaa' }}>Tawkify</div>
+                <h2 style={{ marginBottom: 16 }}>Tawkify sets a new standard in dating safety.</h2>
+                <blockquote style={{ fontStyle: 'italic', color: '#555', fontSize: 17, lineHeight: 1.7, marginBottom: 24 }}>
+                  "Our clients truly appreciate this added layer of security. It's one of the key reasons why they choose Tawkify—they trust us to prioritize their safety and well-being while helping them build meaningful, lasting connections with others."
+                </blockquote>
+                <p style={{ fontSize: 13, color: '#666', marginBottom: 24 }}>Chris Kumar, CEO, Tawkify</p>
+                <Link to="/resources/customer-stories/tawkify" className="btn-primary" style={{ alignSelf: 'flex-start' }}>
+                  Read story →
+                </Link>
+              </div>
+              <div style={{ background: '#f8f8f7', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 40 }}>
+                <div className="img-placeholder img-placeholder-hero">[Product screenshot]</div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

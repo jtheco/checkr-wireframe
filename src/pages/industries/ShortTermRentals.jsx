@@ -9,39 +9,44 @@ export default function ShortTermRentals() {
   return (
     <Layout>
       {/* HERO */}
-      <section className="py-20 bg-white">
+      <section style={{ background: '#fff', padding: '96px 0' }}>
         <div className="content-wrap">
-          <h1 className="mb-5" style={{ maxWidth: '42rem' }}>Protect each stay before it starts.</h1>
-          <p className="mb-8" style={{ maxWidth: '42rem', color: '#666' }}>
-            Every guest and host is a potential risk to your properties, platform, and brand. From fake identities to criminal records, Checkr Trust helps short-term rental platforms screen users so you can reduce incidents, prevent chargebacks, and earn trust at scale.
-          </p>
-          <Link
-            to="/get-a-demo"
-            className="inline-flex items-center px-5 py-2.5 bg-[#111] text-white text-sm rounded-[6px] hover:bg-[#333] transition-colors"
-          >
-            Get a demo
-          </Link>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
+            <div>
+              <span className="eyebrow">KYx for Short-Term Rentals</span>
+              <h1 style={{ marginBottom: 24 }}>Protect each stay before it starts.</h1>
+              <p style={{ fontSize: 18, color: '#555', marginBottom: 32, lineHeight: 1.7 }}>
+                Every guest and host is a potential risk to your properties, platform, and brand. From fake identities to criminal records, Checkr Trust helps short-term rental platforms screen users so you can reduce incidents, prevent chargebacks, and earn trust at scale.
+              </p>
+              <Link to="/get-a-demo" className="btn-primary">Get a demo</Link>
+            </div>
+            <div>
+              <div className="img-placeholder img-placeholder-hero">[Industry screenshot]</div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* PROBLEM-SOLUTION */}
-      <section className="bg-[#f8f8f7] py-16">
+      {/* PROBLEM/SOLUTION */}
+      <section style={{ background: '#f8f8f7', padding: '80px 0' }}>
         <div className="content-wrap">
-          <h2 className="mb-3">One bad booking can damage more than property.</h2>
-          <p style={{ maxWidth: '640px', color: '#666' }}>
-            Property damage, fraud, and safety incidents aren't just operational costs—they drive away users and limit your platform's growth. Checkr Trust helps protect your customers and inventory by flagging risk at sign-up, combining identity verification and criminal record screening in one real-time API. When guests and hosts feel safe, they book more and list more, which means more users and revenue.
-          </p>
+          <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
+            <h2 style={{ marginBottom: 16 }}>One bad booking can damage more than property.</h2>
+            <p style={{ fontSize: 18, color: '#555', lineHeight: 1.7 }}>
+              Property damage, fraud, and safety incidents aren't just operational costs—they drive away users and limit your platform's growth. Checkr Trust helps protect your customers and inventory by flagging risk at sign-up, combining identity verification and criminal record screening in one real-time API. When guests and hosts feel safe, they book more and list more, which means more users and revenue.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* FEATURE-GRID */}
-      <section className="py-16 bg-white">
+      {/* FEATURE GRID (Products) */}
+      <section style={{ background: '#fff', padding: '80px 0' }}>
         <div className="content-wrap">
-          <h2 className="mb-3">The KYx safety stack for short-term rentals.</h2>
-          <p className="mb-8" style={{ maxWidth: '640px', color: '#666' }}>
+          <h2 style={{ marginBottom: 16 }}>The KYx safety stack for short-term rentals.</h2>
+          <p style={{ maxWidth: 640, color: '#555', marginBottom: 40 }}>
             Checkr Trust delivers real-time insights from multiple layers of customer risk—criminal and identity data—all through one flexible integration.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
             {[
               {
                 title: 'National Criminal Database',
@@ -59,11 +64,11 @@ export default function ShortTermRentals() {
                 to: '/products/identity-checks',
               },
             ].map((card) => (
-              <div key={card.title} className="border border-[#e5e5e5] rounded-[10px] p-5 bg-white flex flex-col">
-                <div className="w-7 h-7 bg-[#e5e5e5] rounded mb-3" />
-                <h3 className="mb-2">{card.title}</h3>
-                <p className="mb-4 flex-1" style={{ color: '#666' }}>{card.desc}</p>
-                <Link to={card.to} className="text-sm text-[#111] hover:text-[#333] transition-colors">
+              <div key={card.title} style={{ border: '1px solid #e5e5e5', borderRadius: 16, padding: 28, background: '#fff', display: 'flex', flexDirection: 'column' }}>
+                <div className="icon-placeholder" />
+                <h3 style={{ marginBottom: 8 }}>{card.title}</h3>
+                <p style={{ color: '#666', marginBottom: 16, flex: 1 }}>{card.desc}</p>
+                <Link to={card.to} style={{ fontSize: 14, fontWeight: 500, color: '#111', textDecoration: 'none' }}>
                   Learn more →
                 </Link>
               </div>
@@ -72,13 +77,17 @@ export default function ShortTermRentals() {
         </div>
       </section>
 
-      {/* QUOTE-01 */}
-      <section className="bg-[#f8f8f7] py-16">
+      {/* TESTIMONIAL */}
+      <section style={{ background: '#f8f8f7', padding: '80px 0' }}>
         <div className="content-wrap">
-          <blockquote className="border-l-4 border-[#e5e5e5] pl-5 italic text-[#444]" style={{ maxWidth: 640 }}>
-            "Trust is everything in this business. With Checkr Trust, we don't just hand over the keys—we hand them to someone we can actually trust."
-          </blockquote>
-          <p className="mt-4 text-sm text-[#666]">— Risk Manager, Short-Term Rental Platform</p>
+          <div className="quote-block" style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
+            <div style={{ width: 52, height: 52, borderRadius: '50%', background: '#e0e0e0', margin: '0 auto 24px' }} />
+            <blockquote style={{ fontStyle: 'italic', fontSize: 20, fontWeight: 500, lineHeight: 1.6, color: '#1a1a1a', marginBottom: 24 }}>
+              "Trust is everything in this business. With Checkr Trust, we don't just hand over the keys—we hand them to someone we can actually trust."
+            </blockquote>
+            <div style={{ fontSize: 14, fontWeight: 500, color: '#333' }}>Risk Manager</div>
+            <div style={{ fontSize: 13, color: '#888', marginTop: 4 }}>Short-Term Rental Platform</div>
+          </div>
         </div>
       </section>
 
@@ -88,24 +97,33 @@ export default function ShortTermRentals() {
 
       <DashboardModule />
 
-      {/* STATS-01 */}
-      <section className="py-16 bg-[#f8f8f7]">
+      {/* STATS */}
+      <section style={{ background: '#fff', padding: '80px 0' }}>
         <div className="content-wrap">
-          <h2 className="mb-6">Why leading short-term rental platforms choose Checkr Trust.</h2>
-          <ul className="space-y-2">
+          <h2 style={{ marginBottom: 40 }}>Why leading short-term rental platforms choose Checkr Trust.</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32, marginBottom: 40 }}>
             {[
-              '99% US identity verification coverage',
-              '2,400+ criminal data sources in real time',
-              '40% fewer manual reviews with passive PII checks',
+              { stat: '99%', label: 'US identity verification coverage' },
+              { stat: '2,400+', label: 'criminal data sources in real time' },
+              { stat: '40%', label: 'fewer manual reviews with passive PII checks' },
+            ].map((item) => (
+              <div key={item.label} style={{ textAlign: 'center' }}>
+                <div style={{ fontSize: 48, fontWeight: 600, color: '#111', lineHeight: 1, marginBottom: 8 }}>{item.stat}</div>
+                <div style={{ fontSize: 14, color: '#666' }}>{item.label}</div>
+              </div>
+            ))}
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            {[
               'Designed for high-speed, high-value bookings',
               'Trusted by platforms managing millions of hosts and homes',
             ].map((item) => (
-              <li key={item} className="flex items-start gap-2">
-                <span className="text-[#888] mt-0.5">—</span>
+              <div key={item} style={{ display: 'flex', alignItems: 'flex-start', gap: 12 }}>
+                <div className="icon-sm" style={{ marginTop: 3 }} />
                 <p style={{ color: '#444' }}>{item}</p>
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
 

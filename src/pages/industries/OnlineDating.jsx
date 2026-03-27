@@ -9,39 +9,44 @@ export default function OnlineDating() {
   return (
     <Layout>
       {/* HERO */}
-      <section className="py-20 bg-white">
+      <section style={{ background: '#fff', padding: '96px 0' }}>
         <div className="content-wrap">
-          <h1 className="mb-5" style={{ maxWidth: '42rem' }}>Keep bad actors off your dating platform.</h1>
-          <p className="mb-8" style={{ maxWidth: '42rem', color: '#666' }}>
-            Users count on your platform to meet people who are safe and trustworthy. Checkr Trust helps you screen users fast and flag fraud early, before high-risk individuals enter your ecosystem. By raising the bar on trust and safety, you attract more paying users, reduce churn, and create a premium experience that drives revenue.
-          </p>
-          <Link
-            to="/get-a-demo"
-            className="inline-flex items-center px-5 py-2.5 bg-[#111] text-white text-sm rounded-[6px] hover:bg-[#333] transition-colors"
-          >
-            Get a demo
-          </Link>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
+            <div>
+              <span className="eyebrow">KYx for Online Dating</span>
+              <h1 style={{ marginBottom: 24 }}>Keep bad actors off your dating platform.</h1>
+              <p style={{ fontSize: 18, color: '#555', marginBottom: 32, lineHeight: 1.7 }}>
+                Users count on your platform to meet people who are safe and trustworthy. Checkr Trust helps you screen users fast and flag fraud early, before high-risk individuals enter your ecosystem. By raising the bar on trust and safety, you attract more paying users, reduce churn, and create a premium experience that drives revenue.
+              </p>
+              <Link to="/get-a-demo" className="btn-primary">Get a demo</Link>
+            </div>
+            <div>
+              <div className="img-placeholder img-placeholder-hero">[Industry screenshot]</div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* PROBLEM-SOLUTION */}
-      <section className="bg-[#f8f8f7] py-16">
+      {/* PROBLEM/SOLUTION */}
+      <section style={{ background: '#f8f8f7', padding: '80px 0' }}>
         <div className="content-wrap">
-          <h2 className="mb-3">You can't scale if users don't feel safe.</h2>
-          <p style={{ maxWidth: '640px', color: '#666' }}>
-            If users don't feel safe, they leave, and so does your platform's value. From financial fraud and catfishing to repeat scammers and violent offenses, threats come in many forms. Today's brands are held accountable in headlines and social feeds, making inaction not just risky, but a real liability. Checkr Trust helps you stay ahead by flagging identity fraud and criminal risk at sign-up through a fast, flexible API.
-          </p>
+          <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
+            <h2 style={{ marginBottom: 16 }}>You can't scale if users don't feel safe.</h2>
+            <p style={{ fontSize: 18, color: '#555', lineHeight: 1.7 }}>
+              If users don't feel safe, they leave, and so does your platform's value. From financial fraud and catfishing to repeat scammers and violent offenses, threats come in many forms. Today's brands are held accountable in headlines and social feeds, making inaction not just risky, but a real liability. Checkr Trust helps you stay ahead by flagging identity fraud and criminal risk at sign-up through a fast, flexible API.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* FEATURE-GRID */}
-      <section className="py-16 bg-white">
+      {/* FEATURE GRID (Products) */}
+      <section style={{ background: '#fff', padding: '80px 0' }}>
         <div className="content-wrap">
-          <h2 className="mb-3">The KYx safety stack for online dating platforms.</h2>
-          <p className="mb-8" style={{ maxWidth: '640px', color: '#666' }}>
+          <h2 style={{ marginBottom: 16 }}>The KYx safety stack for online dating platforms.</h2>
+          <p style={{ maxWidth: 640, color: '#555', marginBottom: 40 }}>
             Checkr Trust delivers real-time insights from multiple layers of customer risk—criminal, sex offender, and identity data—all through one flexible integration.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
             {[
               {
                 title: 'National Criminal Database',
@@ -64,11 +69,11 @@ export default function OnlineDating() {
                 to: '/products/identity-checks',
               },
             ].map((card) => (
-              <div key={card.title} className="border border-[#e5e5e5] rounded-[10px] p-5 bg-white flex flex-col">
-                <div className="w-7 h-7 bg-[#e5e5e5] rounded mb-3" />
-                <h3 className="mb-2">{card.title}</h3>
-                <p className="mb-4 flex-1" style={{ color: '#666' }}>{card.desc}</p>
-                <Link to={card.to} className="text-sm text-[#111] hover:text-[#333] transition-colors">
+              <div key={card.title} style={{ border: '1px solid #e5e5e5', borderRadius: 16, padding: 28, background: '#fff', display: 'flex', flexDirection: 'column' }}>
+                <div className="icon-placeholder" />
+                <h3 style={{ marginBottom: 8 }}>{card.title}</h3>
+                <p style={{ color: '#666', marginBottom: 16, flex: 1 }}>{card.desc}</p>
+                <Link to={card.to} style={{ fontSize: 14, fontWeight: 500, color: '#111', textDecoration: 'none' }}>
                   Learn more →
                 </Link>
               </div>
@@ -77,13 +82,17 @@ export default function OnlineDating() {
         </div>
       </section>
 
-      {/* QUOTE-01 (Tawkify) */}
-      <section className="bg-[#f8f8f7] py-16">
+      {/* TESTIMONIAL */}
+      <section style={{ background: '#f8f8f7', padding: '80px 0' }}>
         <div className="content-wrap">
-          <blockquote className="border-l-4 border-[#e5e5e5] pl-5 italic text-[#444]" style={{ maxWidth: 640 }}>
-            "Our clients truly appreciate this added layer of security. It's one of the key reasons why they choose Tawkify—they trust us to prioritize their safety and well-being while helping them build meaningful, lasting connections with others."
-          </blockquote>
-          <p className="mt-4 text-sm text-[#666]">— Chris Kumar, CEO, Tawkify</p>
+          <div className="quote-block" style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
+            <div style={{ width: 52, height: 52, borderRadius: '50%', background: '#e0e0e0', margin: '0 auto 24px' }} />
+            <blockquote style={{ fontStyle: 'italic', fontSize: 20, fontWeight: 500, lineHeight: 1.6, color: '#1a1a1a', marginBottom: 24 }}>
+              "Our clients truly appreciate this added layer of security. It's one of the key reasons why they choose Tawkify—they trust us to prioritize their safety and well-being while helping them build meaningful, lasting connections with others."
+            </blockquote>
+            <div style={{ fontSize: 14, fontWeight: 500, color: '#333' }}>Chris Kumar</div>
+            <div style={{ fontSize: 13, color: '#888', marginTop: 4 }}>CEO, Tawkify</div>
+          </div>
         </div>
       </section>
 
@@ -93,24 +102,33 @@ export default function OnlineDating() {
 
       <DashboardModule />
 
-      {/* STATS-01 */}
-      <section className="py-16 bg-[#f8f8f7]">
+      {/* STATS */}
+      <section style={{ background: '#fff', padding: '80px 0' }}>
         <div className="content-wrap">
-          <h2 className="mb-6">Why leading online dating platforms choose Checkr Trust.</h2>
-          <ul className="space-y-2">
+          <h2 style={{ marginBottom: 40 }}>Why leading online dating platforms choose Checkr Trust.</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32, marginBottom: 40 }}>
             {[
-              '99% US identity verification coverage',
-              '2,400+ criminal data sources in real time',
-              '40% fewer manual reviews with passive PII checks',
+              { stat: '99%', label: 'US identity verification coverage' },
+              { stat: '2,400+', label: 'criminal data sources in real time' },
+              { stat: '40%', label: 'fewer manual reviews with passive PII checks' },
+            ].map((item) => (
+              <div key={item.label} style={{ textAlign: 'center' }}>
+                <div style={{ fontSize: 48, fontWeight: 600, color: '#111', lineHeight: 1, marginBottom: 8 }}>{item.stat}</div>
+                <div style={{ fontSize: 14, color: '#666' }}>{item.label}</div>
+              </div>
+            ))}
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            {[
               'Sub-2-second biometric verification (when needed)',
               'Trusted by platforms that prioritize safety, growth, and reputation',
             ].map((item) => (
-              <li key={item} className="flex items-start gap-2">
-                <span className="text-[#888] mt-0.5">—</span>
+              <div key={item} style={{ display: 'flex', alignItems: 'flex-start', gap: 12 }}>
+                <div className="icon-sm" style={{ marginTop: 3 }} />
                 <p style={{ color: '#444' }}>{item}</p>
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
 

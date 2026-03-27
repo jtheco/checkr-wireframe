@@ -9,39 +9,44 @@ export default function Caregiving() {
   return (
     <Layout>
       {/* HERO */}
-      <section className="py-20 bg-white">
+      <section style={{ background: '#fff', padding: '96px 0' }}>
         <div className="content-wrap">
-          <h1 className="mb-5" style={{ maxWidth: '42rem' }}>Protect caregivers before they step inside.</h1>
-          <p className="mb-8" style={{ maxWidth: '42rem', color: '#666' }}>
-            Caregivers aren't just entering homes, they're entering unknown environments. Your platform is responsible for keeping them safe, and identity verification alone isn't enough. Checkr Trust helps you screen entire households for risk—everyone associated with an address—so you can prevent harm before it happens.
-          </p>
-          <Link
-            to="/get-a-demo"
-            className="inline-flex items-center px-5 py-2.5 bg-[#111] text-white text-sm rounded-[6px] hover:bg-[#333] transition-colors"
-          >
-            Get a demo
-          </Link>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
+            <div>
+              <span className="eyebrow">KYx for Caregiving</span>
+              <h1 style={{ marginBottom: 24 }}>Protect caregivers before they step inside.</h1>
+              <p style={{ fontSize: 18, color: '#555', marginBottom: 32, lineHeight: 1.7 }}>
+                Caregivers aren't just entering homes, they're entering unknown environments. Your platform is responsible for keeping them safe, and identity verification alone isn't enough. Checkr Trust helps you screen entire households for risk—everyone associated with an address—so you can prevent harm before it happens.
+              </p>
+              <Link to="/get-a-demo" className="btn-primary">Get a demo</Link>
+            </div>
+            <div>
+              <div className="img-placeholder img-placeholder-hero">[Industry screenshot]</div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* PROBLEM-SOLUTION */}
-      <section className="bg-[#f8f8f7] py-16">
+      {/* PROBLEM/SOLUTION */}
+      <section style={{ background: '#f8f8f7', padding: '80px 0' }}>
         <div className="content-wrap">
-          <h2 className="mb-3">Caregivers' risk is business risk.</h2>
-          <p style={{ maxWidth: '640px', color: '#666' }}>
-            A missed red flag can have devastating consequences for caregivers, your brand, and the trust that holds your platform together. Checkr Trust delivers real-time identity and criminal record checks to help caregiving platforms reduce risk without adding friction to your verification process flow.
-          </p>
+          <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
+            <h2 style={{ marginBottom: 16 }}>Caregivers' risk is business risk.</h2>
+            <p style={{ fontSize: 18, color: '#555', lineHeight: 1.7 }}>
+              A missed red flag can have devastating consequences for caregivers, your brand, and the trust that holds your platform together. Checkr Trust delivers real-time identity and criminal record checks to help caregiving platforms reduce risk without adding friction to your verification process flow.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* FEATURE-GRID */}
-      <section className="py-16 bg-white">
+      {/* FEATURE GRID (Products) */}
+      <section style={{ background: '#fff', padding: '80px 0' }}>
         <div className="content-wrap">
-          <h2 className="mb-3">The KYx safety stack for caregiving businesses.</h2>
-          <p className="mb-8" style={{ maxWidth: '640px', color: '#666' }}>
+          <h2 style={{ marginBottom: 16 }}>The KYx safety stack for caregiving businesses.</h2>
+          <p style={{ maxWidth: 640, color: '#555', marginBottom: 40 }}>
             Checkr Trust delivers real-time insights from multiple layers of customer risk—criminal, sex offender, and identity data—all through one flexible integration.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
             {[
               {
                 title: 'National Criminal Database',
@@ -64,11 +69,11 @@ export default function Caregiving() {
                 to: '/products/identity-checks',
               },
             ].map((card) => (
-              <div key={card.title} className="border border-[#e5e5e5] rounded-[10px] p-5 bg-white flex flex-col">
-                <div className="w-7 h-7 bg-[#e5e5e5] rounded mb-3" />
-                <h3 className="mb-2">{card.title}</h3>
-                <p className="mb-4 flex-1" style={{ color: '#666' }}>{card.desc}</p>
-                <Link to={card.to} className="text-sm text-[#111] hover:text-[#333] transition-colors">
+              <div key={card.title} style={{ border: '1px solid #e5e5e5', borderRadius: 16, padding: 28, background: '#fff', display: 'flex', flexDirection: 'column' }}>
+                <div className="icon-placeholder" />
+                <h3 style={{ marginBottom: 8 }}>{card.title}</h3>
+                <p style={{ color: '#666', marginBottom: 16, flex: 1 }}>{card.desc}</p>
+                <Link to={card.to} style={{ fontSize: 14, fontWeight: 500, color: '#111', textDecoration: 'none' }}>
                   Learn more →
                 </Link>
               </div>
@@ -77,13 +82,17 @@ export default function Caregiving() {
         </div>
       </section>
 
-      {/* QUOTE-01 */}
-      <section className="bg-[#f8f8f7] py-16">
+      {/* TESTIMONIAL */}
+      <section style={{ background: '#f8f8f7', padding: '80px 0' }}>
         <div className="content-wrap">
-          <blockquote className="border-l-4 border-[#e5e5e5] pl-5 italic text-[#444]" style={{ maxWidth: 640 }}>
-            "Checkr Trust's solution was exactly what we needed. It's simple, straightforward, and low cost. The implementation was super easy, and having a screening process makes trust and safety an advantage in our partner and sales conversations."
-          </blockquote>
-          <p className="mt-4 text-sm text-[#666]">— Leslie Borrell, Founder and CEO, Carefully</p>
+          <div className="quote-block" style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
+            <div style={{ width: 52, height: 52, borderRadius: '50%', background: '#e0e0e0', margin: '0 auto 24px' }} />
+            <blockquote style={{ fontStyle: 'italic', fontSize: 20, fontWeight: 500, lineHeight: 1.6, color: '#1a1a1a', marginBottom: 24 }}>
+              "Checkr Trust's solution was exactly what we needed. It's simple, straightforward, and low cost. The implementation was super easy, and having a screening process makes trust and safety an advantage in our partner and sales conversations."
+            </blockquote>
+            <div style={{ fontSize: 14, fontWeight: 500, color: '#333' }}>Leslie Borrell</div>
+            <div style={{ fontSize: 13, color: '#888', marginTop: 4 }}>Founder and CEO, Carefully</div>
+          </div>
         </div>
       </section>
 
@@ -93,24 +102,33 @@ export default function Caregiving() {
 
       <DashboardModule />
 
-      {/* STATS-01 */}
-      <section className="py-16 bg-[#f8f8f7]">
+      {/* STATS */}
+      <section style={{ background: '#fff', padding: '80px 0' }}>
         <div className="content-wrap">
-          <h2 className="mb-6">Why leading caregiving platforms choose Checkr Trust.</h2>
-          <ul className="space-y-2">
+          <h2 style={{ marginBottom: 40 }}>Why leading caregiving platforms choose Checkr Trust.</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32, marginBottom: 40 }}>
             {[
-              '99% US identity verification coverage',
-              '2,400+ criminal data sources in real time',
-              'Up to 40% reduction in manual reviews',
+              { stat: '99%', label: 'US identity verification coverage' },
+              { stat: '2,400+', label: 'criminal data sources in real time' },
+              { stat: '40%', label: 'reduction in manual reviews' },
+            ].map((item) => (
+              <div key={item.label} style={{ textAlign: 'center' }}>
+                <div style={{ fontSize: 48, fontWeight: 600, color: '#111', lineHeight: 1, marginBottom: 8 }}>{item.stat}</div>
+                <div style={{ fontSize: 14, color: '#666' }}>{item.label}</div>
+              </div>
+            ))}
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            {[
               'Fully API-driven for seamless integration',
               'Trusted by platforms that serve millions',
             ].map((item) => (
-              <li key={item} className="flex items-start gap-2">
-                <span className="text-[#888] mt-0.5">—</span>
+              <div key={item} style={{ display: 'flex', alignItems: 'flex-start', gap: 12 }}>
+                <div className="icon-sm" style={{ marginTop: 3 }} />
                 <p style={{ color: '#444' }}>{item}</p>
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
 

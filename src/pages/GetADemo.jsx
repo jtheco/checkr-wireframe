@@ -47,8 +47,8 @@ export default function GetADemo() {
                   'Built for scale: 99.9% uptime and enterprise-grade performance',
                   'Trusted by top platforms in caregiving, mobility, dating, and beyond',
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-2">
-                    <span className="text-[#888] mt-0.5">—</span>
+                  <li key={item} className="flex items-start gap-3">
+                    <div className="icon-sm mt-0.5" style={{ flexShrink: 0 }} />
                     <p style={{ color: '#444' }}>{item}</p>
                   </li>
                 ))}
