@@ -75,7 +75,9 @@ p {
   padding-inline: var(--content-px);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@layer base {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }

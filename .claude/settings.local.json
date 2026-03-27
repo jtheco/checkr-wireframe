@@ -31,7 +31,8 @@
       "mcp__42f2c61e-b296-47de-8d07-bce07cf20c29__list_teams",
       "mcp__42f2c61e-b296-47de-8d07-bce07cf20c29__list_deployments",
       "Bash(git commit -m \"Fix section backgrounds and spacing across all pages:*)",
-      "Bash(git commit -m \"Fix CSS cascade: move * reset into @layer base so Tailwind spacing utilities are not overridden:*)"
+      "Bash(git commit -m \"Fix CSS cascade: move * reset into @layer base so Tailwind spacing utilities are not overridden:*)",
+      "Bash(git commit -m \"Fix link color cascade: move a{} into @layer base so text-white works on Link buttons:*)"
     ]
   }
 }
