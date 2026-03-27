@@ -23,7 +23,7 @@ const articles = [
 
 export default function BlogModule() {
   return (
-    <section className="py-16">
+    <section className="py-16 bg-[#f8f8f7]">
       <div className="content-wrap">
         <div className="flex items-end justify-between mb-8">
           <h2 style={{ maxWidth: 480 }}>Explore the latest insights on KYx risk intelligence.</h2>

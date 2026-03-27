@@ -3,7 +3,7 @@ export default function ApiModule({
   body,
 }) {
   return (
-    <section className="py-16">
+    <section className="py-16 bg-white">
       <div className="content-wrap">
         <div style={{ maxWidth: 680 }}>
           <h2 className="mb-3">{h2}</h2>

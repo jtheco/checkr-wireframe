@@ -52,7 +52,7 @@ export default function Home() {
   return (
     <Layout>
       {/* HERO */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="content-wrap">
           <h1 className="mb-5" style={{ maxWidth: '42rem' }}>Risk intelligence for every use case.</h1>
           <p className="mb-8" style={{ maxWidth: '42rem', color: '#666' }}>
@@ -104,7 +104,7 @@ export default function Home() {
       </section>
 
       {/* LOGO-01 */}
-      <section className="py-12">
+      <section className="py-12 bg-white">
         <div className="content-wrap">
           <p className="text-sm text-[#888] mb-5">Trusted by:</p>
           <div className="flex flex-wrap gap-3">
@@ -146,7 +146,7 @@ export default function Home() {
       </section>
 
       {/* CREDIBILITY-01 */}
-      <section className="py-16">
+      <section className="py-16 bg-white">
         <div className="content-wrap">
           <h2 className="mb-3">Built for decision-makers who can't afford blindspots.</h2>
           <p className="mb-10" style={{ maxWidth: '640px', color: '#666' }}>
@@ -189,7 +189,7 @@ export default function Home() {
       </section>
 
       {/* API-MODULE (homepage variant with numbered steps) */}
-      <section className="py-16">
+      <section className="py-16 bg-white">
         <div className="content-wrap">
           <div style={{ maxWidth: 680 }}>
             <h2 className="mb-3">Clear signal. Low friction. High volume.</h2>
@@ -254,7 +254,7 @@ export default function Home() {
       </section>
 
       {/* SUCCESS-STORY-01 (Tawkify) */}
-      <section className="py-16">
+      <section className="py-16 bg-white">
         <div className="content-wrap">
           <span className="inline-flex items-center px-3 py-1.5 bg-[#f0f0f0] rounded text-sm font-medium text-[#555] mb-5">
             Tawkify

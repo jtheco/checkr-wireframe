@@ -17,7 +17,7 @@ export default function IdentityChecks() {
   return (
     <Layout>
       {/* HERO */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="content-wrap">
           <h1 className="mb-5" style={{ maxWidth: '42rem' }}>The identity data layer for safer, smarter verification.</h1>
           <p className="mb-8" style={{ maxWidth: '42rem', color: '#666' }}>
@@ -43,7 +43,7 @@ export default function IdentityChecks() {
       </section>
 
       {/* BENEFITS-01 */}
-      <section className="py-16">
+      <section className="py-16 bg-white">
         <div className="content-wrap">
           <h2 className="mb-8">Built to reduce friction, fraud, and false trust.</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -80,7 +80,7 @@ export default function IdentityChecks() {
       </section>
 
       {/* FEATURE-GRID */}
-      <section className="py-16">
+      <section className="py-16 bg-white">
         <div className="content-wrap">
           <h2 className="mb-3">Two layers of trust. One flexible platform.</h2>
           <p className="mb-3" style={{ maxWidth: '640px', color: '#666' }}>
@@ -164,7 +164,7 @@ export default function IdentityChecks() {
       </section>
 
       {/* SUCCESS-STORY-01 (Tawkify) */}
-      <section className="py-16">
+      <section className="py-16 bg-white">
         <div className="content-wrap">
           <span className="inline-flex items-center px-3 py-1.5 bg-[#f0f0f0] rounded text-sm font-medium text-[#555] mb-5">
             Tawkify

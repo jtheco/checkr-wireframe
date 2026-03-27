@@ -11,7 +11,7 @@ const relatedStories = [
 export default function CustomerStoryDetail() {
   return (
     <Layout>
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="content-wrap">
           <div style={{ maxWidth: 760, margin: '0 auto' }}>
             {/* Category tag + H1 */}

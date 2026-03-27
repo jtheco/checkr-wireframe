@@ -9,7 +9,7 @@ export default function FinancialInstitutions() {
   return (
     <Layout>
       {/* HERO */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="content-wrap">
           <h1 className="mb-5" style={{ maxWidth: '42rem' }}>Stop fraud before it disrupts your business.</h1>
           <p className="mb-8" style={{ maxWidth: '42rem', color: '#666' }}>
@@ -35,7 +35,7 @@ export default function FinancialInstitutions() {
       </section>
 
       {/* FEATURE-GRID */}
-      <section className="py-16">
+      <section className="py-16 bg-white">
         <div className="content-wrap">
           <h2 className="mb-3">The KYx risk stack for financial institutions.</h2>
           <p className="mb-8" style={{ maxWidth: '640px', color: '#666' }}>
@@ -84,7 +84,7 @@ export default function FinancialInstitutions() {
       <DashboardModule />
 
       {/* STATS-01 */}
-      <section className="py-16">
+      <section className="py-16 bg-[#f8f8f7]">
         <div className="content-wrap">
           <h2 className="mb-6">Why leading financial institutions choose Checkr Trust.</h2>
           <ul className="space-y-2">

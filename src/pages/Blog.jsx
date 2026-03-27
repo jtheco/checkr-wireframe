@@ -18,7 +18,7 @@ export default function Blog() {
   return (
     <Layout>
       {/* HERO */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="content-wrap">
           <h1 className="mb-5" style={{ maxWidth: '42rem' }}>Blog</h1>
           <p style={{ maxWidth: '42rem', color: '#666' }}>
@@ -49,7 +49,7 @@ export default function Blog() {
       </section>
 
       {/* Article grid */}
-      <section className="py-16">
+      <section className="py-16 bg-white">
         <div className="content-wrap">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
             {articles.map((article) => (

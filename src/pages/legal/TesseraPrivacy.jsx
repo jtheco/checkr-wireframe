@@ -3,7 +3,7 @@ import Layout from '../../components/Layout'
 export default function TesseraPrivacy() {
   return (
     <Layout>
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="content-wrap">
           <div style={{ maxWidth: 720 }}>
             <h1 className="mb-6">Tessera Privacy Policy</h1>

@@ -42,7 +42,7 @@ export default function CustomerStories() {
   return (
     <Layout>
       {/* HERO */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="content-wrap">
           <h1 className="mb-5" style={{ maxWidth: '42rem' }}>See how leading businesses use KYx to turn trust and safety into growth.</h1>
           <p style={{ maxWidth: '42rem', color: '#666' }}>

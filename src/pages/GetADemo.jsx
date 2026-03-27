@@ -29,7 +29,7 @@ export default function GetADemo() {
 
   return (
     <Layout>
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="content-wrap">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Left column */}

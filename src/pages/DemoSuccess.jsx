@@ -4,7 +4,7 @@ import Layout from '../components/Layout'
 export default function DemoSuccess() {
   return (
     <Layout>
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="content-wrap">
           <div style={{ maxWidth: 560, margin: '0 auto', textAlign: 'center' }}>
             <h1 className="mb-5">Thanks for your interest in Checkr Trust.</h1>

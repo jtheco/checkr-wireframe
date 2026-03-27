@@ -17,7 +17,7 @@ export default function CriminalRecords() {
   return (
     <Layout>
       {/* HERO */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="content-wrap">
           <h1 className="mb-5" style={{ maxWidth: '42rem' }}>The criminal data layer for trust, safety, and speed.</h1>
           <p className="mb-8" style={{ maxWidth: '42rem', color: '#666' }}>
@@ -43,7 +43,7 @@ export default function CriminalRecords() {
       </section>
 
       {/* BENEFITS-01 */}
-      <section className="py-16">
+      <section className="py-16 bg-white">
         <div className="content-wrap">
           <h2 className="mb-8">Built for risk reduction, not red tape.</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -84,7 +84,7 @@ export default function CriminalRecords() {
       </section>
 
       {/* FEATURE-GRID */}
-      <section className="py-16">
+      <section className="py-16 bg-white">
         <div className="content-wrap">
           <h2 className="mb-3">Criminal data with no delays or guesswork.</h2>
           <p className="mb-3" style={{ maxWidth: '640px', color: '#666' }}>
@@ -150,7 +150,7 @@ export default function CriminalRecords() {
       </section>
 
       {/* SUCCESS-STORY-01 (Verkada) */}
-      <section className="py-16">
+      <section className="py-16 bg-white">
         <div className="content-wrap">
           <span className="inline-flex items-center px-3 py-1.5 bg-[#f0f0f0] rounded text-sm font-medium text-[#555] mb-5">
             Verkada

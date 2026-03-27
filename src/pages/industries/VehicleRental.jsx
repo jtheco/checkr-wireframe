@@ -9,7 +9,7 @@ export default function VehicleRental() {
   return (
     <Layout>
       {/* HERO */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="content-wrap">
           <h1 className="mb-5" style={{ maxWidth: '42rem' }}>Protect your fleet and the people who power it.</h1>
           <p className="mb-8" style={{ maxWidth: '42rem', color: '#666' }}>
@@ -35,7 +35,7 @@ export default function VehicleRental() {
       </section>
 
       {/* FEATURE-GRID */}
-      <section className="py-16">
+      <section className="py-16 bg-white">
         <div className="content-wrap">
           <h2 className="mb-3">The KYx safety stack for vehicle rental and sharing platforms.</h2>
           <p className="mb-8" style={{ maxWidth: '640px', color: '#666' }}>
@@ -94,7 +94,7 @@ export default function VehicleRental() {
       <DashboardModule />
 
       {/* STATS-01 */}
-      <section className="py-16">
+      <section className="py-16 bg-[#f8f8f7]">
         <div className="content-wrap">
           <h2 className="mb-6">Why leading vehicle rental and sharing platforms choose Checkr Trust.</h2>
           <ul className="space-y-2">
