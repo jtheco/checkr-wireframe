@@ -1,5 +1,8 @@
 import { Link, useLocation } from 'react-router-dom'
 
+// Sections that have no standalone route — render as plain text, not links
+const sectionOnly = new Set(['products', 'industries', 'resources', 'legal'])
+
 const labelMap = {
   products: 'Products',
   industries: 'Industries',
@@ -36,7 +39,7 @@ export default function Breadcrumb() {
 
   const crumbs = segments.map((seg, i) => {
     const path = '/' + segments.slice(0, i + 1).join('/')
-    return { label: toLabel(seg), path }
+    return { label: toLabel(seg), path, linkable: !sectionOnly.has(seg) }
   })
 
   return (
@@ -51,10 +54,12 @@ export default function Breadcrumb() {
               <span className="text-gray-300">/</span>
               {i === crumbs.length - 1 ? (
                 <span className="text-gray-700 font-medium">{crumb.label}</span>
-              ) : (
+              ) : crumb.linkable ? (
                 <Link to={crumb.path} className="hover:text-gray-700 transition-colors">
                   {crumb.label}
                 </Link>
+              ) : (
+                <span>{crumb.label}</span>
               )}
             </li>
           ))}
