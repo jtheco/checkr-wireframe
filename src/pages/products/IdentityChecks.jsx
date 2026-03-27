@@ -76,13 +76,13 @@ export default function IdentityChecks() {
           <h2 style={{ marginBottom: 40 }}>Tailored for high-trust use cases.</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16 }}>
             {industryLinks.map((item) => (
-              <div key={item.to} style={{ border: '1px solid #e5e5e5', borderRadius: 12, padding: 20, background: '#fff', display: 'flex', flexDirection: 'column' }}>
+              <Link key={item.to} to={item.to} style={{ border: '1px solid #e5e5e5', borderRadius: 12, padding: 20, background: '#fff', display: 'flex', flexDirection: 'column', textDecoration: 'none', color: 'inherit' }}>
                 <h3 style={{ marginBottom: 8 }}>{item.title}</h3>
                 <p style={{ marginBottom: 16, flex: 1, fontSize: 14, color: '#666' }}>{item.desc}</p>
-                <Link to={item.to} style={{ fontSize: 14, fontWeight: 500, color: '#111', textDecoration: 'none' }}>
+                <span style={{ fontSize: 14, fontWeight: 500, color: '#111' }}>
                   Learn more →
-                </Link>
-              </div>
+                </span>
+              </Link>
             ))}
           </div>
         </div>

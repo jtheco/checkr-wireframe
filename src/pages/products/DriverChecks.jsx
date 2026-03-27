@@ -68,24 +68,24 @@ export default function DriverChecks() {
             Whether you're managing a rental fleet or a peer-to-peer marketplace, Checkr Trust tailors driver checks to your model, so you can onboard faster, prevent costly incidents, and operate with confidence.
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
-            <div style={{ border: '1px solid #e5e5e5', borderRadius: 12, padding: 20, background: '#fff', display: 'flex', flexDirection: 'column' }}>
+            <Link to="/industries/vehicle-rental-and-sharing" style={{ border: '1px solid #e5e5e5', borderRadius: 12, padding: 20, background: '#fff', display: 'flex', flexDirection: 'column', textDecoration: 'none', color: 'inherit' }}>
               <h3 style={{ marginBottom: 8 }}>Vehicle Rentals</h3>
               <p style={{ marginBottom: 16, flex: 1, fontSize: 14, color: '#666' }}>
                 Verify licenses in real time to reduce incidents, protect your fleet, and create faster, safer rental experiences across every location.
               </p>
-              <Link to="/industries/vehicle-rental-and-sharing" style={{ fontSize: 14, fontWeight: 500, color: '#111', textDecoration: 'none' }}>
+              <span style={{ fontSize: 14, fontWeight: 500, color: '#111' }}>
                 Learn more →
-              </Link>
-            </div>
-            <div style={{ border: '1px solid #e5e5e5', borderRadius: 12, padding: 20, background: '#fff', display: 'flex', flexDirection: 'column' }}>
+              </span>
+            </Link>
+            <Link to="/industries/vehicle-rental-and-sharing" style={{ border: '1px solid #e5e5e5', borderRadius: 12, padding: 20, background: '#fff', display: 'flex', flexDirection: 'column', textDecoration: 'none', color: 'inherit' }}>
               <h3 style={{ marginBottom: 8 }}>Vehicle Sharing</h3>
               <p style={{ marginBottom: 16, flex: 1, fontSize: 14, color: '#666' }}>
                 Protect hosts, reduce financial risk, and deliver a seamless driver check experience with embedded, reliable screening.
               </p>
-              <Link to="/industries/vehicle-rental-and-sharing" style={{ fontSize: 14, fontWeight: 500, color: '#111', textDecoration: 'none' }}>
+              <span style={{ fontSize: 14, fontWeight: 500, color: '#111' }}>
                 Learn more →
-              </Link>
-            </div>
+              </span>
+            </Link>
           </div>
         </div>
       </section>

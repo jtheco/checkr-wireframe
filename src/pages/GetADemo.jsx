@@ -61,13 +61,13 @@ export default function GetADemo() {
                   { title: 'Identity Checks', desc: 'Verify real identities instantly using 9B+ authoritative records.', to: '/products/identity-checks' },
                   { title: 'Driver Checks', desc: 'Access license status and driving history for safer fleet decisions.', to: '/products/driver-checks' },
                 ].map((product) => (
-                  <div key={product.to} className="border border-[#e5e5e5] rounded-[10px] p-4 bg-white">
+                  <Link key={product.to} to={product.to} className="border border-[#e5e5e5] rounded-[10px] p-4 bg-white block no-underline" style={{ color: 'inherit', textDecoration: 'none' }}>
                     <h3 className="mb-1">{product.title}</h3>
                     <p className="text-sm mb-2" style={{ color: '#666' }}>{product.desc}</p>
-                    <Link to={product.to} className="text-xs text-[#888] hover:text-[#111] transition-colors">
+                    <span className="text-xs text-[#888]">
                       Learn more →
-                    </Link>
-                  </div>
+                    </span>
+                  </Link>
                 ))}
               </div>
             </div>

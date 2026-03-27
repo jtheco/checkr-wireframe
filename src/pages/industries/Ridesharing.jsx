@@ -69,14 +69,14 @@ export default function Ridesharing() {
                 to: '/products/identity-checks',
               },
             ].map((card) => (
-              <div key={card.title} style={{ border: '1px solid #e5e5e5', borderRadius: 16, padding: 28, background: '#fff', display: 'flex', flexDirection: 'column' }}>
+              <Link key={card.title} to={card.to} style={{ border: '1px solid #e5e5e5', borderRadius: 16, padding: 28, background: '#fff', display: 'flex', flexDirection: 'column', textDecoration: 'none', color: 'inherit' }}>
                 <div className="icon-placeholder" />
                 <h3 style={{ marginBottom: 8 }}>{card.title}</h3>
                 <p style={{ color: '#666', marginBottom: 16, flex: 1 }}>{card.desc}</p>
-                <Link to={card.to} style={{ fontSize: 14, fontWeight: 500, color: '#111', textDecoration: 'none' }}>
+                <span style={{ fontSize: 14, fontWeight: 500, color: '#111' }}>
                   Learn more →
-                </Link>
-              </div>
+                </span>
+              </Link>
             ))}
           </div>
         </div>
