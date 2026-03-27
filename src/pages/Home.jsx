@@ -103,24 +103,24 @@ export default function Home() {
             </p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
-            <div style={{ border: '1px solid #e5e5e5', borderRadius: 16, padding: 28, background: '#fff' }}>
+            <Link to="/products/criminal-and-public-records-checks" style={{ border: '1px solid #e5e5e5', borderRadius: 16, padding: 28, background: '#fff', textDecoration: 'none', color: 'inherit', display: 'block' }}>
               <div className="icon-placeholder" />
               <h3 style={{ marginBottom: 8 }}>Criminal and Public Records</h3>
               <p style={{ fontSize: 15, marginBottom: 16 }}>Flag high-risk and violent actors with unmatched coverage and clarity.</p>
-              <Link to="/products/criminal-and-public-records-checks" style={{ fontSize: 14, fontWeight: 500, color: '#111', textDecoration: 'none' }}>More about Criminal and Public Records Checks →</Link>
-            </div>
-            <div style={{ border: '1px solid #e5e5e5', borderRadius: 16, padding: 28, background: '#fff' }}>
+              <span style={{ fontSize: 14, fontWeight: 500, color: '#111' }}>More about Criminal and Public Records Checks →</span>
+            </Link>
+            <Link to="/products/identity-checks" style={{ border: '1px solid #e5e5e5', borderRadius: 16, padding: 28, background: '#fff', textDecoration: 'none', color: 'inherit', display: 'block' }}>
               <div className="icon-placeholder" />
               <h3 style={{ marginBottom: 8 }}>Identity Verification</h3>
               <p style={{ fontSize: 15, marginBottom: 16 }}>Reduce fraud by confirming real identities using billions of authoritative records with 99% US coverage.</p>
-              <Link to="/products/identity-checks" style={{ fontSize: 14, fontWeight: 500, color: '#111', textDecoration: 'none' }}>More about Identity Checks →</Link>
-            </div>
-            <div style={{ border: '1px solid #e5e5e5', borderRadius: 16, padding: 28, background: '#fff' }}>
+              <span style={{ fontSize: 14, fontWeight: 500, color: '#111' }}>More about Identity Checks →</span>
+            </Link>
+            <Link to="/products/driver-checks" style={{ border: '1px solid #e5e5e5', borderRadius: 16, padding: 28, background: '#fff', textDecoration: 'none', color: 'inherit', display: 'block' }}>
               <div className="icon-placeholder" />
               <h3 style={{ marginBottom: 8 }}>Driving History</h3>
               <p style={{ fontSize: 15, marginBottom: 16 }}>Reduce accidents, fraud, and theft by screening drivers for license status, violations, and crash history.</p>
-              <Link to="/products/driver-checks" style={{ fontSize: 14, fontWeight: 500, color: '#111', textDecoration: 'none' }}>More about Driver Checks →</Link>
-            </div>
+              <span style={{ fontSize: 14, fontWeight: 500, color: '#111' }}>More about Driver Checks →</span>
+            </Link>
           </div>
         </div>
       </section>
@@ -183,13 +183,13 @@ export default function Home() {
           <h2 style={{ marginBottom: 40 }}>Risk looks different in every industry. We tailor KYx to match.</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16 }}>
             {industryLinks.map((item) => (
-              <div key={item.to} style={{ border: '1px solid #e5e5e5', borderRadius: 12, padding: 20, background: '#fff', display: 'flex', flexDirection: 'column' }}>
+              <Link key={item.to} to={item.to} style={{ border: '1px solid #e5e5e5', borderRadius: 12, padding: 20, background: '#fff', display: 'flex', flexDirection: 'column', textDecoration: 'none', color: 'inherit' }}>
                 <span className="eyebrow">{item.eyebrow}</span>
                 <p style={{ marginBottom: 16, flex: 1, fontSize: 14, color: '#666' }}>{item.desc}</p>
-                <Link to={item.to} style={{ fontSize: 14, fontWeight: 500, color: '#111', textDecoration: 'none' }}>
+                <span style={{ fontSize: 14, fontWeight: 500, color: '#111' }}>
                   {item.cta}
-                </Link>
-              </div>
+                </span>
+              </Link>
             ))}
           </div>
         </div>

@@ -59,7 +59,7 @@ export default function CustomerStories() {
         <div className="content-wrap">
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
             {stories.map((story) => (
-              <div key={story.to} style={{ border: '1px solid #e5e5e5', borderRadius: 20, overflow: 'hidden', background: '#fff', display: 'flex', flexDirection: 'column' }}>
+              <Link key={story.to} to={story.to} style={{ border: '1px solid #e5e5e5', borderRadius: 20, overflow: 'hidden', background: '#fff', display: 'flex', flexDirection: 'column', textDecoration: 'none', color: 'inherit' }}>
                 <div className="img-placeholder img-placeholder-wide" style={{ borderRadius: '12px 12px 0 0' }}>
                   [Story image]
                 </div>
@@ -67,13 +67,13 @@ export default function CustomerStories() {
                   <span style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#999', display: 'block', marginBottom: 12 }}>{story.industry}</span>
                   <div style={{ height: 32, width: 112, borderRadius: 6, background: '#e8e8e8', marginBottom: 16, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 600, color: '#aaa' }}>{story.logo}</div>
                   <h2 style={{ fontSize: 22, marginBottom: 16 }}>{story.headline}</h2>
-                  <Link to={story.to} style={{ fontSize: 14, fontWeight: 600, color: '#111', textDecoration: 'none', marginBottom: 20 }}>Read story →</Link>
+                  <span style={{ fontSize: 14, fontWeight: 600, color: '#111', marginBottom: 20 }}>Read story →</span>
                   <blockquote style={{ borderLeft: '4px solid #e5e5e5', paddingLeft: 16, fontStyle: 'italic', color: '#444', fontSize: 14, lineHeight: 1.7, flex: 1 }}>
                     "{story.quote}"
                   </blockquote>
                   <p style={{ fontSize: 13, color: '#888', marginTop: 12 }}>— {story.attribution}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
